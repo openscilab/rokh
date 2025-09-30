@@ -18,7 +18,7 @@ EVENTS = {
           '23': [{'description': 'روز دندانپزشک', 'is_holiday': False}],
           '25': [{'description': 'روز بزرگداشت عطار نیشابوری', 'is_holiday': False}],
           '29': [{'description': 'روز ارتش جمهوری اسلامی ایران', 'is_holiday': False}],
-          '30': [{'description': 'روز علوم آزمایشگاهی، زاد روز حکیم سید اسماعیل جرجانی', 'is_holiday': False}]
+          '30': [{'description': 'روز علوم آزمایشگاهی، زاد‌روز حکیم سید اسماعیل جرجانی', 'is_holiday': False}]
           },
       # اردیبهشت
     "2": {'1': [{'description': 'روز بزرگداشت سعدی', 'is_holiday': False}, {'description': 'درگذشت سهراب سپهری شاعر و نقاش ایرانی', 'is_holiday': False}],
