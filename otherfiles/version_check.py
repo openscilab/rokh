@@ -4,7 +4,7 @@ import os
 import sys
 import codecs
 Failed = 0
-ROKH_VERSION = "0.8"
+ROKH_VERSION = "0.1"
 
 
 SETUP_ITEMS = [
