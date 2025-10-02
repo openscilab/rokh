@@ -1,6 +1,6 @@
 # Rokh Release Instructions
 
-**Last Update: 2025-10-01**
+**Last Update: 2025-10-02**
 
 1. Create the `release` branch under `dev`
 2. Update all version tags
@@ -21,7 +21,7 @@
 	3. Labels: `release`
 	4. Set milestone
 	5. Wait for all CI pass
-	6. Need review (**1** reviewers)
+	6. Need review (**1** reviewer)
 	7. Squash and merge
 	8. Delete `release` branch
 6. Merge `dev` branch into `main`
