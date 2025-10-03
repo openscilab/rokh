@@ -8,7 +8,7 @@ from .params import Calendar
 def _handle_jalali_date(month: Union[str, int], day: Union[str, int]) -> Tuple[str, str]:
     """
     Ensure month and day are strings for Jalali calendar events lookup.
-    
+
     :param month: The month in the Jalali calendar (1-12).
     :param day: The day in the Jalali calendar (1-31).
     :return: A tuple of (month, day) as strings.
@@ -19,7 +19,7 @@ def _handle_jalali_date(month: Union[str, int], day: Union[str, int]) -> Tuple[s
 def _get_jalali_events(month: Union[str, int], day: Union[str, int]) -> List[Dict[str, str]]:
     """
     Retrieve Jalali calendar events for a specific month and day.
-    
+
     :param month: The month in the Jalali calendar (1-12).
     :param day: The day in the Jalali calendar (1-31).
     """
