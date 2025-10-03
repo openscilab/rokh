@@ -2,7 +2,7 @@
 """Jalali Events"""
 
 EVENTS = {
-      # فروردین
+    # فروردین
     "1": {'1': [{'description': 'جشن نوروز/جشن سال نو', 'is_holiday': True}],
           '2': [{'description': 'عید نوروز', 'is_holiday': True}],
           '3': [{'description': 'عید نوروز', 'is_holiday': True}],
@@ -20,7 +20,7 @@ EVENTS = {
           '29': [{'description': 'روز ارتش جمهوری اسلامی ایران', 'is_holiday': False}],
           '30': [{'description': 'روز علوم آزمایشگاهی، زاد‌روز حکیم سید اسماعیل جرجانی', 'is_holiday': False}]
           },
-      # اردیبهشت
+    # اردیبهشت
     "2": {'1': [{'description': 'روز بزرگداشت سعدی', 'is_holiday': False}, {'description': 'درگذشت سهراب سپهری شاعر و نقاش ایرانی', 'is_holiday': False}],
           '2': [{'description': 'زادروز قیصر امین‌پور نویسنده، مدرس دانشگاه و شاعر معاصرایرانی', 'is_holiday': False}, {'description': 'زادروز یاور همدانی، شاعر و نویسنده و پژوهشگر ایرانی', 'is_holiday': False}],
           '3': [{'description': 'روز بزرگداشت شیخ بهایی؛ روزملی کارآفرینی؛ روز معماری', 'is_holiday': False}],
@@ -41,7 +41,7 @@ EVENTS = {
           '27': [{'description': 'روز ارتباطات و روابط عمومی', 'is_holiday': False}],
           '28': [{'description': 'روز بزرگداشت حکیم عمر خیام', 'is_holiday': False}],
           },
-      # خرداد
+    # خرداد
     "3": {'1': [{'description': 'روز بهره وری و بهینه سازی مصرف', 'is_holiday': False}, {'description': 'روز بزرگداشت ملاصدرا', 'is_holiday': False}, {'description': 'زادروز جلیل شهناز، از سرشناس‌ترین نوازندگان تار و سه تار سدهٔ اخیر در ایران', 'is_holiday': False}],
           '2': [{'description': 'فروریختن ساختمان متروپل در آبادان', 'is_holiday': False}],
           '3': [{'description': 'فتح خرمشهر در عملیات بیت المقدس و روز مقاومت، ایثار و پیروزی', 'is_holiday': False}],
@@ -56,7 +56,7 @@ EVENTS = {
           '29': [{'description': 'درگذشت دکتر علی شریعتی', 'is_holiday': False}],
           '31': [{'description': 'شهادت دکتر مصطفی چمران', 'is_holiday': False}, {'description': 'سالروز زلزله رودبار و منجیل [1369خورشیدی]', 'is_holiday': False}],
           },
-      # تیر
+    # تیر
     "4": {'1': [{'description': 'جشن آب پاشونک، جشن آغاز تابستان', 'is_holiday': False}, {'description': 'درگذشت ابن سینا فیلسوف، پزشک و دانشمند نامدار ایرانی', 'is_holiday': False}, {'description': 'درگذشت غیاث‌الدین جمشید کاشانی ریاضیدان و اخترشناس ایرانی', 'is_holiday': False}],
           '3': [{'description': 'درگذشت ابن سینا پزشک و فیلسوف ایرانی', 'is_holiday': False}],
           '5': [{'description': 'درگذشت میرزا احمد آشتیانی فقیه، فیلسوف شیعی ایرانی', 'is_holiday': False}],
@@ -75,20 +75,20 @@ EVENTS = {
           '25': [{'description': 'روز بهزیستی و تامین اجتماعی', 'is_holiday': False}],
           '27': [{'description': 'اعلام پذیرش قطعنامه 598 شورای امنیت از سوی ایران [ 1367 خورشیدی ]', 'is_holiday': False}],
           },
-      # مرداد
+    # مرداد
     "5": {
-          '4': [{'description': 'افتتاح بزرگترین پالایشگاه نفت سنگین جهان در بندرعباس', 'is_holiday': False}],
-          '7': [{'description': 'اَمرداد روز، جشن  اَمردادگان', 'is_holiday': False}],
-          '8': [{'description': 'روز بزرگداشت شیخ شهاب الدین سهروردی', 'is_holiday': False}],
-          '9': [{'description': 'سالروز اهدای خون در ایران', 'is_holiday': False}],
-          '10': [{'description': 'جشن چله تابستان', 'is_holiday': False}],
-          '14': [{'description': 'صدور فرمان مشروطیت', 'is_holiday': False}, {'description': 'برگزاری اولین کنکور در ایران', 'is_holiday': False}],
-          '17': [{'description': 'روز خبرنگار', 'is_holiday': False}],
-          '26': [{'description': 'سالروز ورود آزادگانِ سرافراز به وطن', 'is_holiday': False}],
-          '28': [{'description': 'سالروز وقایع 28 مرداد پس از برکناری محمد مصدق', 'is_holiday': False}, {'description': 'سالروز فاجعه آتش زدن سینما رکس آبادان', 'is_holiday': False}],
-          '30': [{'description': 'روز پزشک', 'is_holiday': False}, {'description': 'زادروز ابن سینا پزشک و شاعر و از مشهورترین و تاثیرگذارترینِ فیلسوفان و دانشمندان ایران‌زمین', 'is_holiday': False}],
-        },
-      # شهریور
+        '4': [{'description': 'افتتاح بزرگترین پالایشگاه نفت سنگین جهان در بندرعباس', 'is_holiday': False}],
+        '7': [{'description': 'اَمرداد روز، جشن  اَمردادگان', 'is_holiday': False}],
+        '8': [{'description': 'روز بزرگداشت شیخ شهاب الدین سهروردی', 'is_holiday': False}],
+        '9': [{'description': 'سالروز اهدای خون در ایران', 'is_holiday': False}],
+        '10': [{'description': 'جشن چله تابستان', 'is_holiday': False}],
+        '14': [{'description': 'صدور فرمان مشروطیت', 'is_holiday': False}, {'description': 'برگزاری اولین کنکور در ایران', 'is_holiday': False}],
+        '17': [{'description': 'روز خبرنگار', 'is_holiday': False}],
+        '26': [{'description': 'سالروز ورود آزادگانِ سرافراز به وطن', 'is_holiday': False}],
+        '28': [{'description': 'سالروز وقایع 28 مرداد پس از برکناری محمد مصدق', 'is_holiday': False}, {'description': 'سالروز فاجعه آتش زدن سینما رکس آبادان', 'is_holiday': False}],
+        '30': [{'description': 'روز پزشک', 'is_holiday': False}, {'description': 'زادروز ابن سینا پزشک و شاعر و از مشهورترین و تاثیرگذارترینِ فیلسوفان و دانشمندان ایران‌زمین', 'is_holiday': False}],
+    },
+    # شهریور
     "6": {'1': [{'description': 'روز بزرگداشت ابوعلی سینا و روز پزشک', 'is_holiday': False}],
           '2': [{'description': 'آغاز هفته دولت', 'is_holiday': False}],
           '4': [{'description': 'زادروز داراب (کوروش)', 'is_holiday': False},
@@ -114,14 +114,14 @@ EVENTS = {
           '26': [{'description': 'لغو عهدنامه ۱۹۷۵ الجزایر توسط صدام حسین', 'is_holiday': False}, {'description': 'سالروز ترور میکونوس در شهر برلین', 'is_holiday': False}],
           '27': [{'description': 'روز شعر و ادب پارسی و  روز بزرگداشت استاد شهریار', 'is_holiday': False}, {'description': 'درگذشت سید محمدحسین شهریار شاعر نامدار ایرانی', 'is_holiday': False}],
           '30': [{'description': 'زادروز فریدون مشیری  شاعر ایرانی', 'is_holiday': False}, {'description': 'درگذشت پرویز مشکاتیان موسیقی‌دان و نوازنده ایرانی', 'is_holiday': False}],
-          '31': [{'description': 'آغاز هفته دفاع مقدس', 'is_holiday': False},{'description': 'زادروز پرویز یاحقی، نوازنده‌‌ی چیره‌دست ویلون؛ موسیقیدان و آهنگساز ایرانی', 'is_holiday': False}],
-        },
-      # مهر
+          '31': [{'description': 'آغاز هفته دفاع مقدس', 'is_holiday': False}, {'description': 'زادروز پرویز یاحقی، نوازنده‌‌ی چیره‌دست ویلون؛ موسیقیدان و آهنگساز ایرانی', 'is_holiday': False}],
+          },
+    # مهر
     "7": {'1': [{'description': 'زادروز محمدرضا شجریان خواننده، موسیقی‌دان و خوشنویس ایرانی', 'is_holiday': False}, {'description': 'زادروز حسین منزوی شاعر ایرانی', 'is_holiday': False}, {'description': 'آغاز حمله مغول به ایران در پاییز 598 خورشیدی', 'is_holiday': False}],
           '3': [{'description': 'انحلال حزب رستاخیز', 'is_holiday': False}],
           '4': [{'description': 'تأسیس باشگاه فوتبال استقلال (تاج)', 'is_holiday': False}, {'description': 'روز گرامیداشت سربازان وطن', 'is_holiday': False}],
           '6': [{'description': 'اعدام سید مهدی هاشمی به جرم توطئه علیه نظام و بانی فاش ساختن رسوایی ایران-کنترا', 'is_holiday': False}],
-          '7': [{'description': 'روز آتش نشانی و ایمنی', 'is_holiday': False},{'description': 'سقوط هواپیمای حامل جمعی از فرماندهان جنگ (کلاهدوز، نامجو، فلاحی، فکوری، جهان آرا) در سال 1360', 'is_holiday': False}, {'description': 'روز بزرگداشت شمس تبریزی', 'is_holiday': False}],
+          '7': [{'description': 'روز آتش نشانی و ایمنی', 'is_holiday': False}, {'description': 'سقوط هواپیمای حامل جمعی از فرماندهان جنگ (کلاهدوز، نامجو، فلاحی، فکوری، جهان آرا) در سال 1360', 'is_holiday': False}, {'description': 'روز بزرگداشت شمس تبریزی', 'is_holiday': False}],
           '8': [{'description': 'روزبزرگداشت مولوی', 'is_holiday': False}],
           '9': [{'description': 'پیروزی اسکندر مقدونی در نبرد گوگمل و شکست شاه ایران، داریوش سوم و انقراض امپراطوری بزرگ هخامنشی', 'is_holiday': False}, {'description': 'اعدام خسرو قشقایی به اتهام مبارزه مسلحانه علیه جمهوری اسلامی در فیروزآباد فارس', 'is_holiday': False}, {'description': 'قتل عبدالحسین تیمورتاش، دولت‌مرد ایرانی در دوره‌های قاجار و پهلوی، در زندان قصر تهران', 'is_holiday': False}],
           '10': [{'description': 'مهر روز، جشن مهرگان', 'is_holiday': False}, {'description': 'تأسیس حزب توده ایران', 'is_holiday': False}],
@@ -132,9 +132,9 @@ EVENTS = {
           '26': [{'description': 'روز تربیت بدنی و ورزش', 'is_holiday': False}, {'description': 'زادروز ابراهیم گلستان کارگردان، نخستین برندهٔ یک جایزه بین‌المللی برای سینمای ایران', 'is_holiday': False}],
           '28': [{'description': 'اعدام سرهنگ عزت‌الله سیامک به همراه 9 تن دیگر به عنوان اولین گروه از افسران حزب توده بعد از ماجرای 28 مرداد', 'is_holiday': False}, {'description': 'زادروز ستارخان ملقب به سردار ملی و از سرداران جنبش مشروطه ایران', 'is_holiday': False}],
           '29': [{'description': 'روز ملی کوهنورد', 'is_holiday': False}],
-        },
-      # آبان
-    "8": {'1': [{'description': 'روز آمار و برنامه ریزی', 'is_holiday': False}, {'description': 'آغاز کار نخستین فرستنده تلویزیون دولتی ایران، به نام «شبکه ملی»', 'is_holiday': False},{'description': 'روز بزرگداشت ابوالفضل بیهقی، تاریخ‌نگار و نویسنده ایرانی', 'is_holiday': False}],
+          },
+    # آبان
+    "8": {'1': [{'description': 'روز آمار و برنامه ریزی', 'is_holiday': False}, {'description': 'آغاز کار نخستین فرستنده تلویزیون دولتی ایران، به نام «شبکه ملی»', 'is_holiday': False}, {'description': 'روز بزرگداشت ابوالفضل بیهقی، تاریخ‌نگار و نویسنده ایرانی', 'is_holiday': False}],
           '3': [{'description': 'درگذشت فریدون مشیری شاعر ایرانی', 'is_holiday': False}],
           '6': [{'description': 'هجرت محمد (ص) از مکه به مدینه و انتخاب این روز به عنوان مبدأ تاریخ مسلمانان در دو تقویم هجری شمسی و هجری قمری', 'is_holiday': False}],
           '7': [{'description': 'سالروز ورود کوروش بزرگ به بابل در سال 539 پیش از میلاد', 'is_holiday': False}, {'description': 'روز کوروش بزرگ: کوروش بزرگ بنیانگذار امپراتوری هخامنشیان در ایران، شهر بابِل، بزرگترین شهر دنیای باستان و مرکز تمدن بابل را فتح کرد.', 'is_holiday': False}],
@@ -142,7 +142,7 @@ EVENTS = {
           '9': [{'description': 'درگذشت محمد زکریای رازی پزشک، فیلسوف و شیمیدان ایرانی.', 'is_holiday': False}],
           '10': [{'description': 'آبان روز، جشن آبانگان', 'is_holiday': False}],
           '13': [{'description': 'روز دانش آموز', 'is_holiday': False}],
-          '14': [{'description': 'روز فرهنگ عمومی', 'is_holiday': False}, {'description': 'زادروز محمدرضا اسحاقی گرجی، نوازنده و موسیقی‌دان مازندرانی', 'is_holiday': False},{'description': 'روز ملّی مازندران', 'is_holiday': False}],
+          '14': [{'description': 'روز فرهنگ عمومی', 'is_holiday': False}, {'description': 'زادروز محمدرضا اسحاقی گرجی، نوازنده و موسیقی‌دان مازندرانی', 'is_holiday': False}, {'description': 'روز ملّی مازندران', 'is_holiday': False}],
           '15': [{'description': 'جشن میانه پاییز', 'is_holiday': False}],
           '16': [{'description': 'زادروز محمدتقی بهار ملقب به ملک‌الشعرا، شاعر، ادیب، نویسنده و سیاست‌مدار ایرانی', 'is_holiday': False}],
           '18': [{'description': 'روز ملی کیفیت', 'is_holiday': False}, {'description': 'زادروز محمد اقبال شاعر و فیلسوف بزرگ زبان فارسی', 'is_holiday': False}],
@@ -151,7 +151,7 @@ EVENTS = {
           '24': [{'description': 'روز کتاب و کتابخوانی', 'is_holiday': False}],
           '28': [{'description': 'درگذشت ستارخان ملقب به سردار ملی از سرداران جنبش مشروطه ایران', 'is_holiday': False}],
           },
-      # آذر
+    # آذر
     "9": {'1': [{'description': 'آذر جشن', 'is_holiday': False}],
           '2': [{'description': 'درگذشت غلامحسین درویش معروف به «درویش‌خان»، هنرمند نامی و استاد موسیقی ایرانی اواخر دورهٔ قاجاریه', 'is_holiday': False}],
           '3': [{'description': 'زادروز کیهان کلهر آهنگساز و نوازندهٔ برجسته ایرانی', 'is_holiday': False}],
@@ -172,11 +172,11 @@ EVENTS = {
           '26': [{'description': 'روز حمل و نقل', 'is_holiday': False}],
           '30': [{'description': 'جشن شب یلدا، شب چلّه', 'is_holiday': False}]
           },
-      # دی
+    # دی
     "10": {'1': [{'description': 'روز میلاد خورشید؛ جشن خرم روز، نخستین جشن دیگان', 'is_holiday': False}],
            '3': [{'description': 'زادروز احمد محمود نویسندهٔ معاصر ایرانی', 'is_holiday': False}],
            '5': [{'description': 'زمین لرزه ی بم [1382 خورشیدی]', 'is_holiday': False}, {'description': 'سالروز شهادت آشو زرتشت، اَبَراِنسان بزرگ تاریخ', 'is_holiday': False}, {'description': 'درگذشت اکبر رادی نمایشنامه نویس ایرانی', 'is_holiday': False}, {'description': 'سالروز عملیات کربلای 4 [1365 خورشیدی]', 'is_holiday': False}],
-           '8': [{'description': 'دی به آذر روز، دومین جشن دیگان', 'is_holiday': False}, {'description': 'زادروز فروغ فرخزاد شاعر ایرانی', 'is_holiday': False},{'description': 'روز بزرگداشت یعقوب لیث صفاری (رادمان پورماهک) نخستین پادشاه ایرانی پس از اسلام', 'is_holiday': False}],
+           '8': [{'description': 'دی به آذر روز، دومین جشن دیگان', 'is_holiday': False}, {'description': 'زادروز فروغ فرخزاد شاعر ایرانی', 'is_holiday': False}, {'description': 'روز بزرگداشت یعقوب لیث صفاری (رادمان پورماهک) نخستین پادشاه ایرانی پس از اسلام', 'is_holiday': False}],
            '9': [{'description': 'اعدام میهن‌پرستان آذری در تبریز توسط قوای اشغالگر روس [1290 خورشیدی]', 'is_holiday': False}],
            '10': [{'description': 'زادروز لیلیت تریان مجسمه‌ساز ایرانی، مادر مجسمه‌سازی ایران', 'is_holiday': False}],
            '12': [{'description': 'روز حافظ', 'is_holiday': False}],
@@ -192,7 +192,7 @@ EVENTS = {
            '27': [{'description': 'اجرای توافق نامه‌ی برجام', 'is_holiday': False}],
            '30': [{'description': 'آتش‌سوزی و فروریختن ساختمان پلاسکو [1395 خورشیدی]', 'is_holiday': False}],
            },
-      # بهمن
+    # بهمن
     "11": {'1': [{'description': 'زادروز فردوسی', 'is_holiday': False}],
            '2': [{'description': 'بهمن روز، جشن بهمنگان', 'is_holiday': False}],
            '5': [{'description': 'جشن نوسره', 'is_holiday': False}],
@@ -201,21 +201,20 @@ EVENTS = {
            '12': [{'description': 'بازگشت امام خمینی (ره) به ایران', 'is_holiday': False}],
            '15': [{'description': 'جشن میانه زمستان', 'is_holiday': False}],
            '19': [{'description': 'روز نیروی هوایی', 'is_holiday': False}],
-           '22': [{'description': 'پیروزی انقلاب اسلامی', 'is_holiday': True},{'description': 'حمله به سفارت روسیه و قتل گریبایدوف سفیر روسیه تزاری در ایران', 'is_holiday': False}],
+           '22': [{'description': 'پیروزی انقلاب اسلامی', 'is_holiday': True}, {'description': 'حمله به سفارت روسیه و قتل گریبایدوف سفیر روسیه تزاری در ایران', 'is_holiday': False}],
            '29': [{'description': 'جشن سپندارمذگان و روز عشق', 'is_holiday': False}, {'description': 'فاجعه انفجار قطار نیشابور [1382 خورشیدی]', 'is_holiday': False}],
            },
-      # اسفند
+    # اسفند
     "12": {
-           '5': [{'description': 'روز بزرگداشت زمین و بانوان', 'is_holiday': False}, {'description': 'روز بزرگداشت خواجه نصیر الدین طوسی و روز مهندس', 'is_holiday': False}],
-           '7': [{'description': 'سالروز استقلال کانون وکلای دادگستری و روز وکیل مدافع', 'is_holiday': False}, {'description': 'سالروز درگذشت علی اکبر دهخدا', 'is_holiday': False}],
-           '14': [{'description': 'درگذشت دکتر محمد مصدق', 'is_holiday': False}],
-           '15': [{'description': 'روز درختکاری', 'is_holiday': False}],
-           '21': [{'description': 'زادروز منصور نریمان نوازندهٔ بربط، آهنگساز، ردیف‌دان، پژوهشگر موسیقی سنتی ایران و پدر عود ایران', 'is_holiday': False}],
-           '22': [{'description': 'زادروز فرهاد فخرالدینی موسیقیدان، رهبر ارکستر ملی ایران', 'is_holiday': False}],
-           '25': [{'description': 'پایان سرایش شاهنامه', 'is_holiday': False}, {'description': 'درگذشت علی تجویدی، نوازندهٔ ویولن و سه‌تار و آهنگساز ایرانی', 'is_holiday': False}, {'description': 'روز بزرگداشت اختر چرخ ادب، پروین اعتصامی', 'is_holiday': False}],
-           '27': [{'description': 'زادروز پروین اعتصامی شاعر ایرانی', 'is_holiday': False}],
-           '29': [{'description': 'روز ملی شدن صنعت نفت ایران', 'is_holiday': True}],
-           '30': [{'description': 'آخرین روز سال', 'is_holiday': True}]
-        }
+        '5': [{'description': 'روز بزرگداشت زمین و بانوان', 'is_holiday': False}, {'description': 'روز بزرگداشت خواجه نصیر الدین طوسی و روز مهندس', 'is_holiday': False}],
+        '7': [{'description': 'سالروز استقلال کانون وکلای دادگستری و روز وکیل مدافع', 'is_holiday': False}, {'description': 'سالروز درگذشت علی اکبر دهخدا', 'is_holiday': False}],
+        '14': [{'description': 'درگذشت دکتر محمد مصدق', 'is_holiday': False}],
+        '15': [{'description': 'روز درختکاری', 'is_holiday': False}],
+        '21': [{'description': 'زادروز منصور نریمان نوازندهٔ بربط، آهنگساز، ردیف‌دان، پژوهشگر موسیقی سنتی ایران و پدر عود ایران', 'is_holiday': False}],
+        '22': [{'description': 'زادروز فرهاد فخرالدینی موسیقیدان، رهبر ارکستر ملی ایران', 'is_holiday': False}],
+        '25': [{'description': 'پایان سرایش شاهنامه', 'is_holiday': False}, {'description': 'درگذشت علی تجویدی، نوازندهٔ ویولن و سه‌تار و آهنگساز ایرانی', 'is_holiday': False}, {'description': 'روز بزرگداشت اختر چرخ ادب، پروین اعتصامی', 'is_holiday': False}],
+        '27': [{'description': 'زادروز پروین اعتصامی شاعر ایرانی', 'is_holiday': False}],
+        '29': [{'description': 'روز ملی شدن صنعت نفت ایران', 'is_holiday': True}],
+        '30': [{'description': 'آخرین روز سال', 'is_holiday': True}]
+    }
 }
-
