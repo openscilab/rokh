@@ -45,7 +45,5 @@ EVENTS = {
            '15': [{'description': 'ولادت امام علی النقی الهادی علیه السلام', 'is_holiday': False}],
            '18': [{'description': 'عید سعید غدیر خم', 'is_holiday': True}],
            '20': [{'description': 'ولادت امام موسی کاظم علیه السلام', 'is_holiday': False}]}
-
-
 }
 
