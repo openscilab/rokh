@@ -28,8 +28,7 @@ def read_description() -> str:
 
 setup(
     name='rokh',
-    packages=[
-        'rokh', ],
+    packages=['rokh', 'rokh.events'],
     version='0.1',
     description='TODO',
     long_description=read_description(),

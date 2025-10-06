@@ -5,7 +5,7 @@ from .events.jalali import EVENTS as JALALI_EVENTS
 from .params import DateSystem
 import datetime
 import jdatetime
-from hijridate
+import hijridate
 
 
 def _convert_to_gregorian(input_date_system: DateSystem, day: int, month: int, year: int) -> Tuple[int, int, int]:
