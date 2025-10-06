@@ -15,9 +15,9 @@ def _convert_to_gregorian(input_date_system: DateSystem, day: int, month: int, y
     Convert from input date system to Gregorian.
 
     :param input_date_system: input date system
-    :param day: day
-    :param month: month
-    :param year: year
+    :param day: day in input date system
+    :param month: month in input date system
+    :param year: year in input date system
     """
     if input_date_system == DateSystem.GREGORIAN:
         return (day, month, year)
@@ -29,19 +29,18 @@ def _convert_to_gregorian(input_date_system: DateSystem, day: int, month: int, y
         return (g.day, g.month, g.year)
 
 
-def _convert_from_gregorian(target_date_system: DateSystem,  day: int, month: int, year: int, ) -> Tuple[int, int, int]:
+def _convert_from_gregorian(target_date_system: DateSystem,  day: int, month: int, year: int) -> Tuple[int, int, int]:
     """
     Convert from Gregorian to target date system.
 
     :param target_date_system: target date system
-    :param day: day
-    :param month: month
-    :param year: year
+    :param day: day in Gregorian date system
+    :param month: month in Gregorian date system
+    :param year: year in Gregorian date system
     """
     if target_date_system == DateSystem.GREGORIAN:
         return (day, month, year)
     elif target_date_system == DateSystem.JALALI:
-        import jdatetime
         j = jdatetime.GregorianToJalali(year, month, day)
         return (j.jday, j.jmonth, j.jyear)
     elif target_date_system == DateSystem.HIJRI:
@@ -53,9 +52,9 @@ def get_jalali_events(day: int, month: int, year: int= None) -> List[Dict[str, s
     """
     Retrieve Jalali events for a specific date.
 
-    :param day: The day in the Jalali date system
-    :param month: The month in the Jalali date system
-    :param year: The year in the Jalali date system
+    :param day: day in Jalali date system
+    :param month: month in Jalali date system
+    :param year: year in Jalali date system
     """
     return JALALI_EVENTS.get(str(month), {}).get(str(day), [])
 
@@ -64,9 +63,9 @@ def get_gregorian_events(day: int, month: int, year: int= None) -> List[Dict[str
     """
     Retrieve Gregorian events for a specific date.
 
-    :param day: The day in the Gregorian date system
-    :param month: The month in the Gregorian date system
-    :param year: The year in the Gregorian date system
+    :param day: day in Gregorian date system
+    :param month: month in Gregorian date system
+    :param year: year in Gregorian date system
     """
     return GREGORIAN_EVENTS.get(str(month), {}).get(str(day), [])
 
@@ -75,9 +74,9 @@ def get_hijri_events(day: int, month: int, year: int= None) -> List[Dict[str, st
     """
     Retrieve Hijri events for a specific date.
 
-    :param day: The day in the Hijri date system
-    :param month: The month in the Hijri date system
-    :param year: The year in the Hijri date system
+    :param day: day in Hijri date system
+    :param month: month in Hijri date system
+    :param year: year in Hijri date system
     """
     return HIJRI_EVENTS.get(str(month), {}).get(str(day), [])
 
@@ -92,9 +91,9 @@ def get_events(
     """
     Retrieve events for a specific day, month and year in the specified date system.
 
-    :param day: The day in the specified date system
-    :param month: The month in the specified date system
-    :param year: The year in the specified date system
+    :param day: day in input date system
+    :param month: month in input date system
+    :param year: year in input date system
     :param input_date_system: input date system
     :param event_date_system: event date system
     """
