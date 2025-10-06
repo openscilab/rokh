@@ -2,6 +2,8 @@
 """Functions for the rokh package"""
 from typing import List, Dict, Tuple, Union, Optional
 from .events.jalali import EVENTS as JALALI_EVENTS
+from .events.gregorian import EVENTS as GREGORIAN_EVENTS
+from .events.hijri import EVENTS as HIJRI_EVENTS
 from .params import DateSystem
 import datetime
 import jdatetime
@@ -55,8 +57,29 @@ def get_jalali_events(day: int, month: int, year: int= None) -> List[Dict[str, s
     :param month: The month in the Jalali date system
     :param year: The year in the Jalali date system
     """
-    return JALALI_EVENTS.get(month, {}).get(day, [])
+    return JALALI_EVENTS.get(str(month), {}).get(str(day), [])
 
+
+def get_gregorian_events(day: int, month: int, year: int= None) -> List[Dict[str, str]]:
+    """
+    Retrieve Gregorian events for a specific date.
+
+    :param day: The day in the Gregorian date system
+    :param month: The month in the Gregorian date system
+    :param year: The year in the Gregorian date system
+    """
+    return GREGORIAN_EVENTS.get(str(month), {}).get(str(day), [])
+
+
+def get_hijri_events(day: int, month: int, year: int= None) -> List[Dict[str, str]]:
+    """
+    Retrieve Hijri events for a specific date.
+
+    :param day: The day in the Hijri date system
+    :param month: The month in the Hijri date system
+    :param year: The year in the Hijri date system
+    """
+    return HIJRI_EVENTS.get(str(month), {}).get(str(day), [])
 
 
 def get_events(
