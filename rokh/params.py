@@ -5,8 +5,9 @@ from enum import Enum
 ROKH_VERSION = "0.1"
 
 
-class Calendar(Enum):
-    """Enumeration for calendar types"""
+class DateSystem(Enum):
+    """Enumeration for date system types"""
     JALALI = "jalali"
-
+    GREGORIAN = "gregorian"
+    HIJRI = "hijri"
     DEFAULT = JALALI
