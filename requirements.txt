@@ -1,0 +1,2 @@
+jdatetime>=3.8.2
+hijridate>=2.3.0
