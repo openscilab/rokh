@@ -48,7 +48,7 @@ def _convert_from_gregorian(target_date_system: DateSystem,  day: int, month: in
         return (h.day, h.month, h.year)
 
 
-def get_jalali_events(day: int, month: int, year: int= None) -> List[Dict[str, str]]:
+def _get_jalali_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, str]]:
     """
     Retrieve Jalali events for a specific date.
 
@@ -59,7 +59,7 @@ def get_jalali_events(day: int, month: int, year: int= None) -> List[Dict[str, s
     return JALALI_EVENTS.get(str(month), {}).get(str(day), [])
 
 
-def get_gregorian_events(day: int, month: int, year: int= None) -> List[Dict[str, str]]:
+def _get_gregorian_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, str]]:
     """
     Retrieve Gregorian events for a specific date.
 
@@ -70,7 +70,7 @@ def get_gregorian_events(day: int, month: int, year: int= None) -> List[Dict[str
     return GREGORIAN_EVENTS.get(str(month), {}).get(str(day), [])
 
 
-def get_hijri_events(day: int, month: int, year: int= None) -> List[Dict[str, str]]:
+def _get_hijri_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, str]]:
     """
     Retrieve Hijri events for a specific date.
 
@@ -145,14 +145,14 @@ def get_events(
     result = {"events": []}
 
     if event_date_system is None:
-        result["events"].extend(get_jalali_events(*jalali_date))
-        result["events"].extend(get_gregorian_events(*gregorian_date))
-        result["events"].extend(get_hijri_events(*hijri_date))
+        result["events"].extend(_get_jalali_events(*jalali_date))
+        result["events"].extend(_get_gregorian_events(*gregorian_date))
+        result["events"].extend(_get_hijri_events(*hijri_date))
     else:
         if event_date_system == DateSystem.JALALI:
-            result["events"] = get_jalali_events(*jalali_date)
+            result["events"] = _get_jalali_events(*jalali_date)
         elif event_date_system == DateSystem.GREGORIAN:
-            result["events"] = get_gregorian_events(*gregorian_date)
+            result["events"] = _get_gregorian_events(*gregorian_date)
         elif event_date_system == DateSystem.HIJRI:
-            result["events"] = get_hijri_events(*hijri_date)
+            result["events"] = _get_hijri_events(*hijri_date)
     return result
