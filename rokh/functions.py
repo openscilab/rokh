@@ -97,29 +97,17 @@ def _validate_get_events(
     :param event_date_system: event date system
     """
     if year is not None:
-        if not isinstance(year, (int, str)):
-            raise RokhValidationError(YEAR_VALUE_ERROR )
-        try:
-            year = int(year)
-        except ValueError:
-            raise RokhValidationError(YEAR_VALUE_ERROR )
+        if not isinstance(year, int):
+            raise RokhValidationError(YEAR_VALUE_ERROR)
         if year <= 0:
             raise RokhValidationError(YEAR_VALUE_ERROR)
 
-    if not isinstance(month, (int, str)):
-        raise RokhValidationError(MONTH_VALUE_ERROR)
-    try:
-        month = int(month)
-    except ValueError:
+    if not isinstance(month, int):
         raise RokhValidationError(MONTH_VALUE_ERROR)
     if not 1 <= month <= 12:
         raise RokhValidationError(MONTH_VALUE_ERROR)
 
-    if not isinstance(day, (int, str)):
-        raise RokhValidationError(DAY_VALUE_ERROR)
-    try:
-        day = int(day)
-    except ValueError:
+    if not isinstance(day, int):
         raise RokhValidationError(DAY_VALUE_ERROR)
     if not 1 <= day <= 31:
         raise RokhValidationError(DAY_VALUE_ERROR)
@@ -151,9 +139,6 @@ def get_events(
     _validate_get_events(day=day, month=month, year=year, input_date_system=input_date_system, event_date_system=event_date_system)
     if year is None:
         year = datetime.now().year
-    year = int(year)
-    month = int(month)
-    day = int(day)
     gregorian_date = _convert_to_gregorian(input_date_system, day, month, year)
     jalali_date = _convert_from_gregorian(DateSystem.JALALI, *gregorian_date)
     hijri_date = _convert_from_gregorian(DateSystem.HIJRI, *gregorian_date)
