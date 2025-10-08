@@ -145,7 +145,7 @@ def get_events(
     gregorian_date = _convert_to_gregorian(input_date_system, day, month, year)
     jalali_date = _convert_from_gregorian(DateSystem.JALALI, *gregorian_date)
     hijri_date = _convert_from_gregorian(DateSystem.HIJRI, *gregorian_date)
-    result = {"events": dict()}
+    result = {"events": dict(), "is_holiday": False}
 
     if event_date_system is None:
         result["events"]["jalali"] = _get_jalali_events(*jalali_date)
@@ -158,4 +158,11 @@ def get_events(
             result["events"]["gregorian"] = _get_gregorian_events(*gregorian_date)
         elif event_date_system == DateSystem.HIJRI:
             result["events"]["hijri"] = _get_hijri_events(*hijri_date)
+    for date_system in result["events"]:
+        for event in result["events"][date_system]:
+            if event["is_holiday"]:
+                result["is_holiday"] = True
+                break
+        if result["is_holiday"]:
+            break
     return result
