@@ -145,7 +145,14 @@ def get_events(
     gregorian_date = _convert_to_gregorian(input_date_system, day, month, year)
     jalali_date = _convert_from_gregorian(DateSystem.JALALI, *gregorian_date)
     hijri_date = _convert_from_gregorian(DateSystem.HIJRI, *gregorian_date)
-    result = {"events": dict(), "is_holiday": False, "input_date_system": input_date_system.value, "event_date_system": "all"}
+    result = {"events": dict(),
+              "is_holiday": False,
+              "input_date_system": input_date_system.value,
+              "event_date_system": "all",
+              "gregorian_date": dict(zip(["day", "month", "year"], gregorian_date)),
+              "jalali_date": dict(zip(["day", "month", "year"], jalali_date)),
+              "hijri_date": dict(zip(["day", "month", "year"], hijri_date)),
+              }
 
     if event_date_system is None:
         result["events"]["jalali"] = _get_jalali_events(*jalali_date)
