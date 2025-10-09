@@ -129,7 +129,7 @@ def get_events(
     year: Optional[int] = None,
     input_date_system: DateSystem = DateSystem.JALALI,
     event_date_system: Optional[DateSystem] = None,
-) -> Dict[str, List[Dict[str, str]]]:
+) -> Dict[str, Union[bool, str, Dict[str, int], Dict[str, List[Dict[str, str]]]]]:
     """
     Retrieve events for a specific day, month and year in the specified date system.
 
@@ -145,17 +145,32 @@ def get_events(
     gregorian_date = _convert_to_gregorian(input_date_system, day, month, year)
     jalali_date = _convert_from_gregorian(DateSystem.JALALI, *gregorian_date)
     hijri_date = _convert_from_gregorian(DateSystem.HIJRI, *gregorian_date)
-    result = {"events": []}
+    result = {"events": dict(),
+              "is_holiday": False,
+              "input_date_system": input_date_system.value,
+              "event_date_system": "all",
+              "gregorian_date": dict(zip(["day", "month", "year"], gregorian_date)),
+              "jalali_date": dict(zip(["day", "month", "year"], jalali_date)),
+              "hijri_date": dict(zip(["day", "month", "year"], hijri_date)),
+              }
 
     if event_date_system is None:
-        result["events"].extend(_get_jalali_events(*jalali_date))
-        result["events"].extend(_get_gregorian_events(*gregorian_date))
-        result["events"].extend(_get_hijri_events(*hijri_date))
+        result["events"]["jalali"] = _get_jalali_events(*jalali_date)
+        result["events"]["gregorian"] = _get_gregorian_events(*gregorian_date)
+        result["events"]["hijri"] = _get_hijri_events(*hijri_date)
     else:
+        result["event_date_system"] = event_date_system.value
         if event_date_system == DateSystem.JALALI:
-            result["events"] = _get_jalali_events(*jalali_date)
+            result["events"]["jalali"] = _get_jalali_events(*jalali_date)
         elif event_date_system == DateSystem.GREGORIAN:
-            result["events"] = _get_gregorian_events(*gregorian_date)
+            result["events"]["gregorian"] = _get_gregorian_events(*gregorian_date)
         elif event_date_system == DateSystem.HIJRI:
-            result["events"] = _get_hijri_events(*hijri_date)
+            result["events"]["hijri"] = _get_hijri_events(*hijri_date)
+    for date_system in result["events"]:
+        for event in result["events"][date_system]:
+            if event["is_holiday"]:
+                result["is_holiday"] = True
+                break
+        if result["is_holiday"]:
+            break
     return result
