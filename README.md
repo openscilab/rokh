@@ -71,8 +71,8 @@ Use `get_events` to retrieve all Iranian calendar events for a given date.
 Simply specify the date (in Jalali, Gregorian, or Hijri format), and the function returns corresponding events.
 
 ```pycon
->> from rokh import get_events, DateSystem
->> result = get_events(day=1, month=1, year=1403, input_date_system=DateSystem.JALALI)
+>>> from rokh import get_events, DateSystem
+>>> result = get_events(day=1, month=1, year=1403, input_date_system=DateSystem.JALALI)
 # {
 #    'events': {
 #      'gregorian': [
