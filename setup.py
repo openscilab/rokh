@@ -23,14 +23,15 @@ def read_description() -> str:
             description += c.read()
         return description
     except Exception:
-        return '''TODO'''
+        return '''Rokh provides a unified interface for accessing Iranian calendar events across Jalali, Gregorian, and Hijri Ghamari date systems. It lets you easily retrieve national holidays, cultural events, and religious occasions by simply passing a date. It automatically converts between calendars and return event's description.
+You can use it in your apps, bots, and research tools that rely on Iranian date conversions, holidays, and cultural event data.'''
 
 
 setup(
     name='rokh',
     packages=['rokh', 'rokh.events'],
     version='0.1',
-    description='TODO',
+    description="Rokh provides a unified interface for accessing Iranian calendar events across Jalali, Gregorian, and Hijri Ghamari date systems. It lets you easily retrieve national holidays, cultural events, and religious occasions by simply passing a date. It automatically converts between calendars and return event's description. You can use it in your apps, bots, and research tools that rely on Iranian date conversions, holidays, and cultural event data.",
     long_description=read_description(),
     long_description_content_type='text/markdown',
     author='Rokh Development Team',
