@@ -73,17 +73,29 @@ Simply specify the date (in Jalali, Gregorian, or Hijri format), and the functio
 ```pycon
 >> from rokh import get_events, DateSystem
 >> result = get_events(day=1, month=1, year=1403, input_date_system=DateSystem.JALALI)
-# {'events': {'gregorian': [{'description': 'روز جهانی شادی',
-#                            'is_holiday': False}],
-#             'hijri': [],
-#             'jalali': [{'description': 'جشن نوروز/جشن سال نو',
-#                         'is_holiday': True}]},
-#  'gregorian_date': {'day': 20, 'month': 3, 'year': 2024},
-#  'hijri_date': {'day': 10, 'month': 9, 'year': 1445},
-#  'jalali_date': {'day': 1, 'month': 1, 'year': 1403},
-#  'is_holiday': True,
-#  'input_date_system': 'jalali',
-#  'event_date_system': 'all'}
+# {
+#    'events': {
+#      'gregorian': [
+#        {
+#          'description': 'روز جهانی شادی',
+#          'is_holiday': False
+#        }
+#      ],
+#      'hijri': [],
+#      'jalali': [
+#        {
+#          'description': 'جشن نوروز/جشن سال نو',
+#          'is_holiday': True
+#        }
+#      ]
+#    },
+#    'gregorian_date': {'day': 20, 'month': 3, 'year': 2024},
+#    'hijri_date': {'day': 10, 'month': 9, 'year': 1445},
+#    'jalali_date': {'day': 1, 'month': 1, 'year': 1403},
+#    'is_holiday': True,
+#    'input_date_system': 'jalali',
+#    'event_date_system': 'all'
+# }
 ```
 
 ## Issues & bug reports
