@@ -22,9 +22,10 @@ about:
     home: https://github.com/openscilab/rokh
     license: MIT
     license_family: MIT
-    summary: Rokh: TODO
+    summary: Rokh: Iranian Calendar Events Collection
     description: |
-	TODO
+	    Rokh provides a unified interface for accessing Iranian calendar events across Jalali, Gregorian, and Hijri Ghamari date systems. It lets you easily retrieve national holidays, cultural events, and religious occasions by simply passing a date. It automatically converts between calendars and return event's description.
+        You can use it in your apps, bots, and research tools that rely on Iranian date conversions, holidays, and cultural event data.
 	
         Website: https://openscilab.com
 
