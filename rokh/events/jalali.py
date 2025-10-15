@@ -232,7 +232,8 @@ EVENTS = {
           '30': [{'description': 'جشن شب یلدا، شب چلّه', 'is_holiday': False}]
           },
     # دی
-    "10": {'1': [{'description': 'روز میلاد خورشید؛ جشن خرم روز، نخستین جشن دیگان', 'is_holiday': False}],
+    "10": {'1': [{'description': 'روز میلاد خورشید', 'is_holiday': False},
+                 {'description': 'جشن خرم روز، نخستین جشن دیگان', 'is_holiday': False}],
            '3': [{'description': 'زادروز احمد محمود نویسندهٔ معاصر ایرانی', 'is_holiday': False}],
            '5': [{'description': 'زمین لرزه ی بم [1382 خورشیدی]', 'is_holiday': False},
                  {'description': 'سالروز شهادت آشو زرتشت، اَبَراِنسان بزرگ تاریخ', 'is_holiday': False},
