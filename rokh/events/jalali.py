@@ -108,7 +108,7 @@ EVENTS = {
         '8': [{'description': 'روز بزرگداشت شیخ شهاب الدین سهروردی', 'is_holiday': False}],
         '9': [{'description': 'سالروز اهدای خون در ایران', 'is_holiday': False}],
         '10': [{'description': 'جشن چله تابستان', 'is_holiday': False}],
-        '14': [{'description': 'صدور فرمان مشروطیت', 'is_holiday': False},
+        '14': [{'description': 'سالروز صدور فرمان مشروطیت', 'is_holiday': False},
                {'description': 'برگزاری اولین کنکور در ایران', 'is_holiday': False}],
         '17': [{'description': 'روز خبرنگار', 'is_holiday': False}],
         '26': [{'description': 'سالروز ورود آزادگانِ سرافراز به وطن', 'is_holiday': False}],
