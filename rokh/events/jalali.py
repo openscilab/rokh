@@ -276,6 +276,7 @@ EVENTS = {
     # اسفند
     "12": {
         '5': [{'description': 'روز بزرگداشت زمین و بانوان', 'is_holiday': False},
+              {'description': 'جشن سپندارمذگان و روز عشق', 'is_holiday': False},
               {'description': 'روز بزرگداشت خواجه نصیر الدین طوسی و روز مهندس', 'is_holiday': False}],
         '7': [{'description': 'سالروز استقلال کانون وکلای دادگستری و روز وکیل مدافع', 'is_holiday': False},
               {'description': 'سالروز درگذشت علی اکبر دهخدا', 'is_holiday': False}],
