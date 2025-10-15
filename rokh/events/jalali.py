@@ -213,6 +213,7 @@ EVENTS = {
           '3': [{'description': 'زادروز کیهان کلهر آهنگساز و نوازندهٔ برجسته ایرانی', 'is_holiday': False}],
           '4': [{'description': 'درگذشت جبار باغچه‌بان بنیان‌گذار نخستین کودکستان و نخستین مدرسه ناشنوایان ایران، اولین مؤلف و ناشر کتاب کودک در ایران', 'is_holiday': False}],
           '5': [{'description': 'روز بسیج مستضعفان', 'is_holiday': False}],
+          '7': [{'description': 'سالروز عملیات مروارید و روز نیروی دریایی', 'is_holiday': False}],
           '9': [{'description': 'جشن آذرگان، آذر روز', 'is_holiday': False}],
           '10': [{'description': 'روز مجلس', 'is_holiday': False}],
           '11': [{'description': 'کشته شدن میرزا کوچک خان جنگلی مبارز و رهبر جنبش ملی جنگل', 'is_holiday': False}],
