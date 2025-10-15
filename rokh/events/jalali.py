@@ -120,9 +120,8 @@ EVENTS = {
     # شهریور
     "6": {'1': [{'description': 'روز بزرگداشت ابوعلی سینا و روز پزشک', 'is_holiday': False}],
           '2': [{'description': 'آغاز هفته دولت', 'is_holiday': False}],
-          '4': [{'description': 'زادروز داراب (کوروش)', 'is_holiday': False},
-                {'description': 'شهریور روز، جشن شهریورگان', 'is_holiday': False},
-                {'description': 'زادروز کوروش بزرگ', 'is_holiday': False}],
+          '4': [{'description': 'زادروز کوروش بزرگ', 'is_holiday': False},
+                {'description': 'شهریور روز، جشن شهریورگان', 'is_holiday': False}],
           '5': [{'description': 'روز بزرگداشت محمدبن زکریای رازی و روز داروساز', 'is_holiday': False}],
           '8': [{'description': 'انفجار در دفتر نخست‌وزیری جمهوری اسلامی ایران، روز مبارزه با تروریسم', 'is_holiday': False},
                 {'description': 'درگذشت علامه حلی از علمای شیعه قرن هشتم قمری', 'is_holiday': False}],
