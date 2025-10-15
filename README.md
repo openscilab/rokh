@@ -1,6 +1,6 @@
 <div align="center">
     <img src="https://github.com/openscilab/rokh/raw/main/otherfiles/logo.png" alt="Rokh Logo" width="220">
-    <h1>Rokh: TODO</h1>
+    <h1>Rokh: Iranian Calendar Events Collection</h1>
     <br/>
     <a href="https://badge.fury.io/py/rokh"><img src="https://badge.fury.io/py/rokh.svg" alt="PyPI version"></a>
     <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
@@ -13,7 +13,11 @@
 
 ## Overview
 <p align="justify">
-TODO
+Rokh provides a unified interface for accessing Iranian calendar events across Jalali, Gregorian, and Hijri date systems. It lets you easily retrieve national holidays, cultural events, and religious occasions by simply passing a date. It automatically converts between calendars and return event's description.
+You can use it in your apps, bots, and research tools that rely on Iranian date conversions, holidays, and cultural event data.
+
+In Farsi, Rokh is derived from Rokhdad, meaning "event." Rokh itself also means “face” and even refers to the "rook" piece in chess.
+
 </p>
 
 <table>
@@ -63,7 +67,36 @@ TODO
 
 ## Usage
 
-TODO
+Use `get_events` to retrieve all Iranian calendar events for a given date.
+Simply specify the date (in Jalali, Gregorian, or Hijri format), and the function returns corresponding events.
+
+```pycon
+>>> from rokh import get_events, DateSystem
+>>> result = get_events(day=1, month=1, year=1403, input_date_system=DateSystem.JALALI)
+# {
+#    'events': {
+#      'gregorian': [
+#        {
+#          'description': 'روز جهانی شادی',
+#          'is_holiday': False
+#        }
+#      ],
+#      'hijri': [],
+#      'jalali': [
+#        {
+#          'description': 'جشن نوروز/جشن سال نو',
+#          'is_holiday': True
+#        }
+#      ]
+#    },
+#    'gregorian_date': {'day': 20, 'month': 3, 'year': 2024},
+#    'hijri_date': {'day': 10, 'month': 9, 'year': 1445},
+#    'jalali_date': {'day': 1, 'month': 1, 'year': 1403},
+#    'is_holiday': True,
+#    'input_date_system': 'jalali',
+#    'event_date_system': 'all'
+# }
+```
 
 ## Issues & bug reports
 
