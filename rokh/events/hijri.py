@@ -5,10 +5,10 @@ EVENTS = {
     # ٱلْمُحَرَّم
     "1": {'9': [{'description': 'تاسوعای حسینی', 'is_holiday': True}],
           '10': [{'description': 'عاشورای حسینی', 'is_holiday': True}],
-          '12': [{'description': 'شهادت  امام زین العابدین علیه السلام', 'is_holiday': False}]},
+          '12': [{'description': 'شهادت امام زین العابدین علیه السلام', 'is_holiday': False}]},
     # صَفَر
     "2": {'20': [{'description': 'اربعین حسینی', 'is_holiday': True}],
-          '28': [{'description': 'رحلت  رسول اکرم', 'is_holiday': True},
+          '28': [{'description': 'رحلت رسول اکرم', 'is_holiday': True},
                  {'description': 'شهادت امام حسن مجتبی علیه السلام', 'is_holiday': True}],
           '30': [{'description': 'شهادت امام رضا علیه السلام', 'is_holiday': True}]},
     # رَبِيع ٱلْأَوَّل
@@ -26,7 +26,7 @@ EVENTS = {
     "6": {'3': [{'description': 'شهادت حضرت فاطمه زهرا سلام الله علیها', 'is_holiday': True}],
           '20': [{'description': 'ولادت حضرت فاطمه زهرا سلام الله علیها و روز مادر', 'is_holiday': False}]},
     # رَجَب
-    "7": {'1': [{'description': 'ولادت  امام محمد باقر علیه السلام', 'is_holiday': False}],
+    "7": {'1': [{'description': 'ولادت امام محمد باقر علیه السلام', 'is_holiday': False}],
           '3': [{'description': 'شهادت امام علی النقی علیه السلام', 'is_holiday': False}],
           '10': [{'description': 'ولادت امام محمد تقی علیه السلام', 'is_holiday': False}],
           '13': [{'description': 'ولادت امام علی علیه السلام و روز پدر', 'is_holiday': True}],
@@ -51,7 +51,7 @@ EVENTS = {
            '25': [{'description': 'شهادت امام جعفر صادق علیه السلام', 'is_holiday': True}]},
     # ذُو ٱلْقَعْدَة
     "11": {'1': [{'description': 'ولادت حضرت معصومه سلام الله علیها و روز دختران', 'is_holiday': False}],
-           '11': [{'description': 'ولادت امام  رضا علیه السلام', 'is_holiday': False}],
+           '11': [{'description': 'ولادت امام رضا علیه السلام', 'is_holiday': False}],
            '30': [{'description': 'شهادت امام محمد تقی علیه السلام', 'is_holiday': False}]},
     # ذُو ٱلْحِجَّة
     "12": {'7': [{'description': 'شهادت امام محمد باقر علیه السلام', 'is_holiday': False}],
