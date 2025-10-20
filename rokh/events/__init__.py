@@ -1,2 +1,2 @@
 # -*- coding: utf-8 -*-
-"""Initialize the events module"""
+"""Initialize the events module."""

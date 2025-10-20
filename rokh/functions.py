@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Functions for the rokh package"""
+"""Functions for the rokh package."""
 from typing import List, Dict, Tuple, Union, Optional, Any
 from .events.jalali import EVENTS as JALALI_EVENTS
 from .events.gregorian import EVENTS as GREGORIAN_EVENTS
