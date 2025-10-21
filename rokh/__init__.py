@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Initialize the rokh package"""
+"""Initialize the rokh package."""
 
 from .functions import get_events
 from .errors import RokhValidationError

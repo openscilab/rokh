@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Gregorian Events"""
+"""Gregorian Events."""
 
 EVENTS = {
     # January

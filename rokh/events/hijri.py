@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Hijri Events"""
+"""Hijri Events."""
 
 EVENTS = {
     # ٱلْمُحَرَّم
