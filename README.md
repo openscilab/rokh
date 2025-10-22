@@ -104,6 +104,12 @@ Just fill an issue and describe it. We'll check it ASAP! or send an email to [ro
 - Please complete the issue template
 
 
+## References
+
+<blockquote>1- <a href="https://www.time.ir/">ساعت و تقویم ایران | تاریخ امروز | Time.ir</a></blockquote>
+<blockquote>2- <a href="https://holidayapi.ir/">Jalali Holiday API</a></blockquote>
+
+
 ## Show your support
 
 
