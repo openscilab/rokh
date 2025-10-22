@@ -1,5 +1,4 @@
 <div align="center">
-    <img src="https://github.com/openscilab/rokh/raw/main/otherfiles/logo.png" alt="Rokh Logo" width="220">
     <h1>Rokh: Iranian Calendar Events Collection</h1>
     <br/>
     <a href="https://badge.fury.io/py/rokh"><img src="https://badge.fury.io/py/rokh.svg" alt="PyPI version"></a>
@@ -16,7 +15,7 @@
 Rokh provides a unified interface for accessing Iranian calendar events across Jalali, Gregorian, and Hijri date systems. It lets you easily retrieve national holidays, cultural events, and religious occasions by simply passing a date. It automatically converts between calendars and return event's description.
 You can use it in your apps, bots, and research tools that rely on Iranian date conversions, holidays, and cultural event data.
 
-In Farsi, Rokh is derived from Rokhdad, meaning "event." Rokh itself also means “face” and even refers to the "rook" piece in chess.
+In Farsi, Rokh is derived from Rokhdad, meaning "event". Rokh itself also means "face" and even refers to the "rook" piece in chess.
 
 </p>
 
@@ -51,7 +50,7 @@ In Farsi, Rokh is derived from Rokhdad, meaning "event." Rokh itself also means 
         </td>
         <td align="center">
             <img src="https://github.com/openscilab/rokh/actions/workflows/test.yml/badge.svg?branch=dev">
-            </td>
+        </td>
     </tr>
 </table>
 
