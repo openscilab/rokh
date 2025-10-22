@@ -49,6 +49,7 @@ setup(
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Natural Language :: English',
+        'Natural Language :: Persian',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 3.7',
@@ -64,6 +65,8 @@ setup(
         'Intended Audience :: End Users/Desktop',
         'Intended Audience :: Manufacturing',
         'Topic :: Education',
+        'Topic :: Office/Business :: Scheduling',
+        'Topic :: Utilities',
     ],
     license='MIT',
 )
