@@ -7,9 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ## [0.1] - 2025-xx-xx
 ### Added
-- Item1
-- Item2
-- Item3
+- `get_events` function
+- Jalali events
+- Gregorian events
+- Hijri events
 
 
 [Unreleased]: https://github.com/openscilab/rokh/compare/v0.1...dev
