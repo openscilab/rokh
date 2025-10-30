@@ -1,6 +1,7 @@
 <div align="center">
     <h1>Rokh: Iranian Calendar Events Collection</h1>
     <br/>
+    <a href="https://codecov.io/gh/openscilab/rokh"><img src="https://codecov.io/gh/openscilab/rokh/graph/badge.svg?token=9AH3WVVWF4"></a>
     <a href="https://badge.fury.io/py/rokh"><img src="https://badge.fury.io/py/rokh.svg" alt="PyPI version"></a>
     <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
     <a href="https://github.com/openscilab/rokh"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/openscilab/rokh"></a>
