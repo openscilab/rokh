@@ -4,6 +4,7 @@
     <a href="https://badge.fury.io/py/rokh"><img src="https://badge.fury.io/py/rokh.svg" alt="PyPI version"></a>
     <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
     <a href="https://github.com/openscilab/rokh"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/openscilab/rokh"></a>
+    <a href="https://discord.gg/G73QMkmVzg"><img src="https://img.shields.io/discord/1064533716615049236.svg" alt="Discord Channel"></a>
 
 </div>
 
@@ -102,6 +103,12 @@ Simply specify the date (in Jalali, Gregorian, or Hijri format), and the functio
 Just fill an issue and describe it. We'll check it ASAP! or send an email to [rokh@openscilab.com](mailto:rokh@openscilab.com "rokh@openscilab.com"). 
 
 - Please complete the issue template
+
+You can also join our discord server
+
+<a href="https://discord.gg/G73QMkmVzg">
+  <img src="https://img.shields.io/discord/1064533716615049236.svg?style=for-the-badge" alt="Discord Channel">
+</a>
 
 
 ## References
