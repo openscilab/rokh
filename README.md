@@ -54,6 +54,13 @@ In Farsi, Rokh is derived from Rokhdad, meaning "event." Rokh itself also means 
         </td>
     </tr>
 </table>
+<table>
+    <tr> 
+        <td align="center">Code Quality</td>
+        <td align="center"><a href="https://www.codefactor.io/repository/github/openscilab/rokh"><img src="https://www.codefactor.io/repository/github/openscilab/rokh/badge" alt="CodeFactor"></a></td>
+        <td align="center"><a href="https://app.codacy.com/gh/openscilab/rokh/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/ea874378ce94451f81ef30732c68216c"></a></td>
+    </tr>
+</table>
 
 
 ## Installation
