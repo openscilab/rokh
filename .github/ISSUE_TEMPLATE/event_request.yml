@@ -29,9 +29,9 @@ body:
       description: Which date system the event is based on?
       options:
         - Jalali
-        - Hejri
+        - Hijri
         - Gregorian
-      default: 1
+      default: 0
     validations:
       required: true
   - type: textarea
