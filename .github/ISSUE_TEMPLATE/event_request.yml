@@ -1,0 +1,44 @@
+name: Event Request
+description: Suggest a new event to be added to the package
+title: "[Event]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your time to add this event!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: event-description
+    attributes:
+      label: Event description
+      placeholder: >
+        Add a description of the event
+    validations:
+      required: true
+  - type: dropdown
+    id: date-system
+    attributes:
+      label: Date system
+      description: Which date system the event is based on?
+      options:
+        - Jalali
+        - Hijri
+        - Gregorian
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: Link to the event reference
+      placeholder: >
+        Add a link to the reference of the event
+    validations:
+      required: true
