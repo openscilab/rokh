@@ -174,3 +174,14 @@ def get_events(
         if result["is_holiday"]:
             break
     return result
+
+
+def get_today_events(event_date_system: Optional[DateSystem] = None) -> Dict[str, Union[bool, str, Dict[str, int], Dict[str, List[Dict[str, str]]]]]:
+    """
+    Retrieve today events in the specified date system.
+
+    :param event_date_system: event date system
+    """
+    today = datetime.datetime.now()
+    return get_events(day=today.day, month=today.month, year=today.year, input_date_system=DateSystem.GREGORIAN, event_date_system=event_date_system)
+
