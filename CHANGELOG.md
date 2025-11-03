@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+- `get_today_events` function
 - Event issue template
 ### Changed
 - `README.md` updated
