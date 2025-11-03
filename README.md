@@ -75,6 +75,9 @@ In Farsi, Rokh is derived from Rokhdad, meaning "event." Rokh itself also means 
 
 ## Usage
 
+
+### Get events
+
 Use `get_events` to retrieve all Iranian calendar events for a given date.
 Simply specify the date (in Jalali, Gregorian, or Hijri format), and the function returns corresponding events.
 
@@ -105,6 +108,39 @@ Simply specify the date (in Jalali, Gregorian, or Hijri format), and the functio
 #    'event_date_system': 'all'
 # }
 ```
+
+### Get today events
+
+Use `get_today_events` to retrieve today events.
+
+```pycon
+>>> from rokh import get_today_events, DateSystem
+>>> result = get_today_events()
+# {
+#    'events': {
+#      'gregorian': [
+#        {
+#          'description': 'روز جهانی شادی',
+#          'is_holiday': False
+#        }
+#      ],
+#      'hijri': [],
+#      'jalali': [
+#        {
+#          'description': 'جشن نوروز/جشن سال نو',
+#          'is_holiday': True
+#        }
+#      ]
+#    },
+#    'gregorian_date': {'day': 20, 'month': 3, 'year': 2024},
+#    'hijri_date': {'day': 10, 'month': 9, 'year': 1445},
+#    'jalali_date': {'day': 1, 'month': 1, 'year': 1403},
+#    'is_holiday': True,
+#    'input_date_system': 'gregorian',
+#    'event_date_system': 'all'
+# }
+```
+
 
 ## Issues & bug reports
 
