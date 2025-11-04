@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Event issue template
 ### Changed
 - `README.md` updated
+- `get_events` function current year bug fixed
 ## [0.1] - 2025-10-25
 ### Added
 - `get_events` function
