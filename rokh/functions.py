@@ -51,6 +51,17 @@ def _convert_from_gregorian(target_date_system: DateSystem,  day: int, month: in
         return (h.day, h.month, h.year)
 
 
+def _get_current_year(date_system: DateSystem) -> int:
+    """
+    Get the current year.
+
+    :param date_system: date system
+    """
+    today_gregorian = datetime.datetime.now()
+    today_converted = _convert_from_gregorian(target_date_system=date_system, day=today_gregorian.day, month=today_gregorian.month, year=today_gregorian.year)
+    return today_converted[2]
+
+
 def _get_jalali_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, str]]:
     """
     Retrieve Jalali events for a specific date.
@@ -141,7 +152,7 @@ def get_events(
     """
     _validate_get_events(day=day, month=month, year=year, input_date_system=input_date_system, event_date_system=event_date_system)
     if year is None:
-        year = datetime.now().year
+        year = _get_current_year(date_system=input_date_system)
     gregorian_date = _convert_to_gregorian(input_date_system, day, month, year)
     jalali_date = _convert_from_gregorian(DateSystem.JALALI, *gregorian_date)
     hijri_date = _convert_from_gregorian(DateSystem.HIJRI, *gregorian_date)
