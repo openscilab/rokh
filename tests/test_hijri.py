@@ -106,7 +106,7 @@ def test_get_events_hijri_all_current_year():
     today = datetime.datetime.now()
     month = 1
     day = 1
-    year = hijridate.Gregorian(today.year, month, day).to_hijri().year
+    year = hijridate.Gregorian(today.year, today.month, today.day).to_hijri().year
     result = get_events(day, month, input_date_system=DateSystem.HIJRI)
     g = hijridate.Hijri(year, month, day).to_gregorian()
     j = jdatetime.GregorianToJalali(g.year, g.month, g.day)
