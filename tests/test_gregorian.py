@@ -102,6 +102,32 @@ def test_get_events_gregorian_all():
     assert result["events"]["hijri"] == HIJRI_EVENTS.get(str(h.month), {}).get(str(h.day), [])
 
 
+def test_get_events_gregorian_all_current_year():
+    today = datetime.datetime.now()
+    month = 1
+    day = 1
+    year = today.year
+    result = get_events(day, month, input_date_system=DateSystem.GREGORIAN)
+    j = jdatetime.GregorianToJalali(year, month, day)
+    h = hijridate.Gregorian(year, month, day).to_hijri()
+    assert isinstance(result, dict)
+    assert set(result["events"].keys()) == {"hijri", "jalali", "gregorian"}
+    assert result["event_date_system"] == "all"
+    assert result["input_date_system"] == "gregorian"
+    assert result["gregorian_date"]["year"] == year
+    assert result["gregorian_date"]["month"] == month
+    assert result["gregorian_date"]["day"] == day
+    assert result["jalali_date"]["year"] == j.jyear
+    assert result["jalali_date"]["month"] == j.jmonth
+    assert result["jalali_date"]["day"] == j.jday
+    assert result["hijri_date"]["year"] == h.year
+    assert result["hijri_date"]["month"] == h.month
+    assert result["hijri_date"]["day"] == h.day
+    assert result["events"]["gregorian"] == GREGORIAN_EVENTS.get(str(month), {}).get(str(day), [])
+    assert result["events"]["jalali"] == JALALI_EVENTS.get(str(j.jmonth), {}).get(str(j.jday), [])
+    assert result["events"]["hijri"] == HIJRI_EVENTS.get(str(h.month), {}).get(str(h.day), [])
+
+
 def test_get_today_events_gregorian():
     today = datetime.datetime.now()
     month = today.month
