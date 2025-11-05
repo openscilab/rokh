@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://github.com/openscilab/rokh/raw/logo/otherfiles/logo.png" alt="Rokh Logo" width="250">
+    <img src="https://github.com/openscilab/rokh/raw/main/otherfiles/logo.png" alt="Rokh Logo" width="250">
     <h1>Rokh: Iranian Calendar Events Collection</h1>
     <br/>
     <a href="https://codecov.io/gh/openscilab/rokh"><img src="https://codecov.io/gh/openscilab/rokh/graph/badge.svg?token=9AH3WVVWF4"></a>
