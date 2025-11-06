@@ -7,7 +7,6 @@
     <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
     <a href="https://github.com/openscilab/rokh"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/openscilab/rokh"></a>
     <a href="https://discord.gg/G73QMkmVzg"><img src="https://img.shields.io/discord/1064533716615049236.svg" alt="Discord Channel"></a>
-
 </div>
 
 ----------
@@ -84,7 +83,7 @@ Simply specify the date (in Jalali, Gregorian, or Hijri format), and the functio
 
 ```pycon
 >>> from rokh import get_events, DateSystem
->>> result = get_events(day=1, month=1, year=1403, input_date_system=DateSystem.JALALI)
+>>> get_events(day=1, month=1, year=1403, input_date_system=DateSystem.JALALI)
 # {
 #    'events': {
 #      'gregorian': [
@@ -116,7 +115,7 @@ Use `get_today_events` to retrieve today events.
 
 ```pycon
 >>> from rokh import get_today_events, DateSystem
->>> result = get_today_events()
+>>> get_today_events()
 # {
 #    'events': {
 #      'gregorian': [
