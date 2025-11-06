@@ -32,7 +32,7 @@ def _convert_to_gregorian(input_date_system: DateSystem, day: int, month: int, y
         return (g.day, g.month, g.year)
 
 
-def _convert_from_gregorian(target_date_system: DateSystem,  day: int, month: int, year: int) -> Tuple[int, int, int]:
+def _convert_from_gregorian(target_date_system: DateSystem, day: int, month: int, year: int) -> Tuple[int, int, int]:
     """
     Convert from Gregorian to target date system.
 
@@ -58,7 +58,11 @@ def _get_current_year(date_system: DateSystem) -> int:
     :param date_system: date system
     """
     today_gregorian = datetime.datetime.now()
-    today_converted = _convert_from_gregorian(target_date_system=date_system, day=today_gregorian.day, month=today_gregorian.month, year=today_gregorian.year)
+    today_converted = _convert_from_gregorian(
+        target_date_system=date_system,
+        day=today_gregorian.day,
+        month=today_gregorian.month,
+        year=today_gregorian.year)
     return today_converted[2]
 
 
@@ -96,11 +100,11 @@ def _get_hijri_events(day: int, month: int, year: Optional[int]= None) -> List[D
 
 
 def _validate_get_events(
-    day: Any,
-    month: Any,
-    year: Any,
-    input_date_system: Any,
-    event_date_system: Any) -> None:
+        day: Any,
+        month: Any,
+        year: Any,
+        input_date_system: Any,
+        event_date_system: Any) -> None:
     """
     Validate get_events function inputs.
 
@@ -150,7 +154,12 @@ def get_events(
     :param input_date_system: input date system
     :param event_date_system: event date system
     """
-    _validate_get_events(day=day, month=month, year=year, input_date_system=input_date_system, event_date_system=event_date_system)
+    _validate_get_events(
+        day=day,
+        month=month,
+        year=year,
+        input_date_system=input_date_system,
+        event_date_system=event_date_system)
     if year is None:
         year = _get_current_year(date_system=input_date_system)
     gregorian_date = _convert_to_gregorian(input_date_system, day, month, year)
@@ -187,12 +196,17 @@ def get_events(
     return result
 
 
-def get_today_events(event_date_system: Optional[DateSystem] = None) -> Dict[str, Union[bool, str, Dict[str, int], Dict[str, List[Dict[str, str]]]]]:
+def get_today_events(event_date_system: Optional[DateSystem] = None) -> Dict[str,
+                                                                             Union[bool, str, Dict[str, int], Dict[str, List[Dict[str, str]]]]]:
     """
     Retrieve today events in the specified date system.
 
     :param event_date_system: event date system
     """
     today = datetime.datetime.now()
-    return get_events(day=today.day, month=today.month, year=today.year, input_date_system=DateSystem.GREGORIAN, event_date_system=event_date_system)
-
+    return get_events(
+        day=today.day,
+        month=today.month,
+        year=today.year,
+        input_date_system=DateSystem.GREGORIAN,
+        event_date_system=event_date_system)

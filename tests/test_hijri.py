@@ -9,26 +9,26 @@ TEST_CASE_NAME = "Hijri tests"
 
 
 def test_get_events_hijri_gregorian():
-        month = 1
-        day = 1
-        year = 1447
-        result = get_events(day, month, year, input_date_system=DateSystem.HIJRI, event_date_system=DateSystem.GREGORIAN)
-        g = hijridate.Hijri(year, month, day).to_gregorian()
-        j = jdatetime.GregorianToJalali(g.year, g.month, g.day)
-        assert isinstance(result, dict)
-        assert list(result["events"].keys()) == ["gregorian"]
-        assert result["event_date_system"] == "gregorian"
-        assert result["input_date_system"] == "hijri"
-        assert result["gregorian_date"]["year"] == g.year
-        assert result["gregorian_date"]["month"] == g.month
-        assert result["gregorian_date"]["day"] == g.day
-        assert result["jalali_date"]["year"] == j.jyear
-        assert result["jalali_date"]["month"] == j.jmonth
-        assert result["jalali_date"]["day"] == j.jday
-        assert result["hijri_date"]["year"] == year
-        assert result["hijri_date"]["month"] == month
-        assert result["hijri_date"]["day"] == day
-        assert result["events"]["gregorian"] == GREGORIAN_EVENTS.get(str(g.month), {}).get(str(g.day), [])
+    month = 1
+    day = 1
+    year = 1447
+    result = get_events(day, month, year, input_date_system=DateSystem.HIJRI, event_date_system=DateSystem.GREGORIAN)
+    g = hijridate.Hijri(year, month, day).to_gregorian()
+    j = jdatetime.GregorianToJalali(g.year, g.month, g.day)
+    assert isinstance(result, dict)
+    assert list(result["events"].keys()) == ["gregorian"]
+    assert result["event_date_system"] == "gregorian"
+    assert result["input_date_system"] == "hijri"
+    assert result["gregorian_date"]["year"] == g.year
+    assert result["gregorian_date"]["month"] == g.month
+    assert result["gregorian_date"]["day"] == g.day
+    assert result["jalali_date"]["year"] == j.jyear
+    assert result["jalali_date"]["month"] == j.jmonth
+    assert result["jalali_date"]["day"] == j.jday
+    assert result["hijri_date"]["year"] == year
+    assert result["hijri_date"]["month"] == month
+    assert result["hijri_date"]["day"] == day
+    assert result["events"]["gregorian"] == GREGORIAN_EVENTS.get(str(g.month), {}).get(str(g.day), [])
 
 
 def test_get_events_hijri_jalali():

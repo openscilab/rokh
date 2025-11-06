@@ -61,4 +61,3 @@ EVENTS = {
            '18': [{'description': 'عید سعید غدیر خم', 'is_holiday': True}],
            '20': [{'description': 'ولادت امام موسی کاظم علیه السلام', 'is_holiday': False}]}
 }
-
