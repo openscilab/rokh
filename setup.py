@@ -32,14 +32,14 @@ In Farsi, Rokh is derived from Rokhdad, meaning "event." Rokh itself also means 
 setup(
     name='rokh',
     packages=['rokh', 'rokh.events'],
-    version='0.1',
+    version='0.2',
     description="Rokh: Iranian Calendar Events Collection",
     long_description=read_description(),
     long_description_content_type='text/markdown',
     author='Rokh Development Team',
     author_email='rokh@openscilab.com',
     url='https://github.com/openscilab/rokh',
-    download_url='https://github.com/openscilab/rokh/tarball/v0.1',
+    download_url='https://github.com/openscilab/rokh/tarball/v0.2',
     keywords="events date date-system calendar gregorian hijri jalali",
     project_urls={
             'Source': 'https://github.com/openscilab/rokh',

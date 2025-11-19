@@ -68,9 +68,9 @@ In Farsi, Rokh is derived from Rokhdad, meaning "event." Rokh itself also means 
 
 ### PyPI
 - Check [Python Packaging User Guide](https://packaging.python.org/installing/)
-- Run `pip install rokh==0.1`
+- Run `pip install rokh==0.2`
 ### Source code
-- Download [Version 0.1](https://github.com/openscilab/rokh/archive/v0.1.zip) or [Latest Source](https://github.com/openscilab/rokh/archive/dev.zip)
+- Download [Version 0.2](https://github.com/openscilab/rokh/archive/v0.2.zip) or [Latest Source](https://github.com/openscilab/rokh/archive/dev.zip)
 - Run `pip install .`
 
 ## Usage
