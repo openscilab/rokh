@@ -224,7 +224,7 @@ EVENTS = {
                {'description': 'روز جهانی مالکیت معنوی', 'is_holiday': False}],
         '27': [{'description': 'درگذشت رالف والدو امرسون فیلسوف و نویسندهٔ آمریکایی', 'is_holiday': False},
                {'description': 'روز جهانی طراحی و گرافیک', 'is_holiday': False}],
-        '28': [{'description': 'روز جهانی ایمنی و بهداشت شغلی', 'is_holiday': False}],
+        '28': [{'description': 'روز جهانی ایمنی و بهداشت در محل کار', 'is_holiday': False}],
         '29': [{'description': 'روز جهانی یادبود قربانیان زلزله ها', 'is_holiday': False}],
         '30': [{'description': 'زادروز کارل فریدریش گاوس ریاضیدان مشهور آلمانی', 'is_holiday': False},
                {'description': 'روز جهانی موسیقی جاز', 'is_holiday': False}]
