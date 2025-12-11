@@ -253,7 +253,7 @@ EVENTS = {
                {'description': 'روز جهانی پرستار', 'is_holiday': False},
                {'description': 'روز جهانی بهداشت گیاه', 'is_holiday': False},
                {'description': 'هفته جهانی ایمنی جاده', 'is_holiday': False},
-               {'description': ' روز ماه کامل، وساک', 'is_holiday': False}],
+               {'description': 'روز ماه کامل، وساک', 'is_holiday': False}],
         '13': [{'description': 'درگذشت ژوزف هانری دانشمند و فیزیکدان سرشناس آمریکایی', 'is_holiday': False}],
         '15': [{'description': 'روز جهانی خانواده', 'is_holiday': False}],
         '16': [{'description': 'روز جهانی همزیستی در صلح', 'is_holiday': False},
