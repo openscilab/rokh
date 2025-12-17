@@ -685,7 +685,7 @@ EVENTS = {
                {'description': 'سقوط وال‌استریت در سال ۱۹۲۹ سقوط بازار سهام در بازار بورس نیویورک', 'is_holiday': False},
                {'description': 'درگذشت لوئی رنو صنعت‌گر فرانسوی، از بنیان‌گذاران شرکت خودرو سازی رنو', 'is_holiday': False},
                {'description': 'شروع هفته خلع سلاح', 'is_holiday': False},
-               {'description': 'روز جهانی اطلاعات توسعه', 'is_holiday': False},
+               {'description': 'روز جهانی اطلاعات مربوط به توسعه', 'is_holiday': False},
                {'description': 'شروع هفته جهانی سواد رسانه‌ای و اطلاعاتی', 'is_holiday': False}],
         '25': [{'description': 'زادروز اواریست گالوا ریاضیدان فرانسوی، واضع نظریه گروه در علم جبر', 'is_holiday': False},
                {'description': 'زادروز پابلو پیکاسو نقاش، پیکرتراش، طراح صحنه و سرامیک‌کار مشهور اسپانیایی، خالق سبک کوبیسم', 'is_holiday': False}],
