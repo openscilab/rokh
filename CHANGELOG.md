@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - United nations list of international days and weeks
 ### Changed
 - `README.md` updated
+- Gregorian events typo fixed
 ## [0.2] - 2025-11-20
 ### Added
 - Logo
