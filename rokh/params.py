@@ -2,7 +2,7 @@
 """Parameters for the rokh package."""
 from enum import Enum
 
-ROKH_VERSION = "0.2"
+ROKH_VERSION = "0.3"
 
 
 class DateSystem(Enum):
