@@ -42,7 +42,8 @@ EVENTS = {
         '1': [{'description': 'ولادت امام محمد باقر علیه السلام', 'is_holiday': False}],
         '3': [{'description': 'شهادت امام علی النقی علیه السلام', 'is_holiday': False}],
         '10': [{'description': 'ولادت امام محمد تقی علیه السلام', 'is_holiday': False}],
-        '13': [{'description': 'ولادت امام علی علیه السلام و روز پدر', 'is_holiday': True}],
+        '13': [{'description': 'ولادت امام علی علیه السلام و روز پدر', 'is_holiday': True},
+               {'description': 'آغاز ایام البیض (اعتکاف)', 'is_holiday': False}],
         '15': [{'description': 'وفات حضرت زینب سلام الله علیها', 'is_holiday': False}],
         '25': [{'description': 'شهادت امام موسی کاظم علیه السلام', 'is_holiday': False}],
         '27': [{'description': 'مبعث رسول اکرم (ص)', 'is_holiday': True}]

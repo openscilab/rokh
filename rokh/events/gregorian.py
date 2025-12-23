@@ -839,6 +839,7 @@ EVENTS = {
                {'description': 'روز جهانی بسکتبال', 'is_holiday': False}],
         '23': [{'description': 'درگذشت آنتونی فوکر بنیانگذار شرکت فوکر', 'is_holiday': False}],
         '25': [{'description': 'جشن کریسمس', 'is_holiday': False},
+               {'description': 'ولادت حضرت عیسی مسیح (ع)', 'is_holiday': False},
                {'description': 'روز جهانی بزرگداشت دوستی', 'is_holiday': False}],
         '27': [{'description': 'زادروز یوهانس کپلر دانشمند، ریاضیدان و ستاره‌شناس سرشناس آلمانی', 'is_holiday': False},
                {'description': 'روز جهانی آمادگی برای بیماری های همه‌گیر', 'is_holiday': False}],
