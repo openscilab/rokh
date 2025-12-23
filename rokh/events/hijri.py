@@ -59,9 +59,11 @@ EVENTS = {
     },
     # رَمَضَان
     "9": {
-        '15': [{'description': 'ولادت امام حسن مجتبی علیه السلام', 'is_holiday': False}],
+        '10': [{'description': 'وفات حضرت خدیجه (س)', 'is_holiday': False}],
+        '15': [{'description': 'ولادت امام حسن مجتبی علیه السلام و روز اکرام', 'is_holiday': False}],
         '18': [{'description': 'شب قدر', 'is_holiday': False}],
-        '19': [{'description': 'ضربت خوردن حضرت علی علیه السلام', 'is_holiday': False}],
+        '19': [{'description': 'ضربت خوردن حضرت علی علیه السلام و روز نهج البلاغه', 'is_holiday': False}],
+        '20': [{'description': 'شب قدر', 'is_holiday': False}],
         '21': [{'description': 'شهادت حضرت علی علیه السلام', 'is_holiday': True}],
         '22': [{'description': 'شب قدر', 'is_holiday': False}]
     },
