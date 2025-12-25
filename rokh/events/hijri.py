@@ -55,7 +55,9 @@ EVENTS = {
         '4': [{'description': 'ولادت ابوالفضل العباس علیه السلام و روز جانباز', 'is_holiday': False}],
         '5': [{'description': 'ولادت امام زین العابدین علیه السلام و روز صحیفه سجادیه', 'is_holiday': False}],
         '11': [{'description': 'ولادت علی اکبر علیه السلام و روز جوان', 'is_holiday': False}],
-        '15': [{'description': 'ولادت حضرت قائم عجل الله تعالی فرجه و جشن نیمه شعبان', 'is_holiday': True}]
+        '15': [{'description': 'ولادت حضرت قائم عجل الله تعالی فرجه و جشن نیمه شعبان', 'is_holiday': True},
+               {'description': 'روز جهانی مستضعفان', 'is_holiday': False},
+               {'description': 'روز سربازان گمنام امام زمان (عج)', 'is_holiday': False}]
     },
     # رَمَضَان
     "9": {
@@ -65,7 +67,8 @@ EVENTS = {
         '19': [{'description': 'ضربت خوردن حضرت علی علیه السلام و روز نهج البلاغه', 'is_holiday': False}],
         '20': [{'description': 'شب قدر', 'is_holiday': False}],
         '21': [{'description': 'شهادت حضرت علی علیه السلام', 'is_holiday': True}],
-        '22': [{'description': 'شب قدر', 'is_holiday': False}]
+        '22': [{'description': 'شب قدر', 'is_holiday': False}],
+        '30': [{'description': 'روز جهانی قدس', 'is_holiday': False}],
     },
     # شَوَّال
     "10": {
