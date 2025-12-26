@@ -68,7 +68,6 @@ EVENTS = {
         '20': [{'description': 'شب قدر', 'is_holiday': False}],
         '21': [{'description': 'شهادت حضرت علی علیه السلام', 'is_holiday': True}],
         '22': [{'description': 'شب قدر', 'is_holiday': False}],
-        '30': [{'description': 'روز جهانی قدس', 'is_holiday': False}],
     },
     # شَوَّال
     "10": {
