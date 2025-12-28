@@ -364,9 +364,7 @@ EVENTS = {
                {'description': 'درگذشت علی تجویدی، نوازندهٔ ویولن و سه‌تار و آهنگساز ایرانی', 'is_holiday': False},
                {'description': 'روز بزرگداشت اختر چرخ ادب، پروین اعتصامی', 'is_holiday': False},
                {'description': 'بمباران شیمیایی حلبچه به دست ارتش بعث عراق', 'is_holiday': False}],
-        '27': [{'description': 'زادروز پروین اعتصامی شاعر ایرانی', 'is_holiday': False},
-               {'description': 'آخرین چهارشنبه سال', 'is_holiday': False}],
-        '28': [{'description': 'آخرین پنجشنبه سال', 'is_holiday': False}],
+        '27': [{'description': 'زادروز پروین اعتصامی شاعر ایرانی', 'is_holiday': False}],
         '29': [{'description': 'روز ملی شدن صنعت نفت ایران', 'is_holiday': True}],
         '30': [{'description': 'آخرین روز سال', 'is_holiday': True}]
     }
