@@ -35,7 +35,8 @@ EVENTS = {
     # جُمَادَىٰ ٱلثَّانِيَة
     "6": {
         '3': [{'description': 'شهادت حضرت فاطمه زهرا سلام الله علیها', 'is_holiday': True}],
-        '13': [{'description': 'سالروز وفات حضرت ام‌البنین (س)', 'is_holiday': False}],
+        '13': [{'description': 'سالروز وفات حضرت ام‌البنین (س)', 'is_holiday': False},
+               {'description': 'روز تکریم مادران و همسران شهدا', 'is_holiday': False}],
         '20': [{'description': 'ولادت حضرت فاطمه زهرا سلام الله علیها و روز مادر', 'is_holiday': False}]
     },
     # رَجَب
