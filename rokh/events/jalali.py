@@ -312,7 +312,6 @@ EVENTS = {
         '1': [{'description': 'زادروز فردوسی', 'is_holiday': False},
               {'description': 'روز بزرگداشت خاقانی شروانی', 'is_holiday': False}],
         '2': [{'description': 'بهمن روز، جشن بهمنگان', 'is_holiday': False}],
-        '3': [{'description': 'روز پاسدار', 'is_holiday': False}],
         '5': [{'description': 'جشن نوسره', 'is_holiday': False}],
         '6': [{'description': 'بزرگداشت صفی‌الدین اُرمَوی و روز موسیقی ایرانی', 'is_holiday': False},
               {'description': 'سالروز حماسه مردم آمل', 'is_holiday': False}],
