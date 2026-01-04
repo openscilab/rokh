@@ -74,6 +74,7 @@ EVENTS = {
     "10": {
         '1': [{'description': 'عید سعید فطر', 'is_holiday': True}],
         '2': [{'description': 'تعطیل به مناسبت عید سعید فطر', 'is_holiday': True}],
+        '17': [{'description': 'روز فرهنگ پهلوانی و ورزش زورخانه‌ای', 'is_holiday': False}],
         '25': [{'description': 'شهادت امام جعفر صادق علیه السلام', 'is_holiday': True}]
     },
     # ذُو ٱلْقَعْدَة
