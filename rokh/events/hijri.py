@@ -80,6 +80,9 @@ EVENTS = {
     # ذُو ٱلْقَعْدَة
     "11": {
         '1': [{'description': 'ولادت حضرت معصومه سلام الله علیها و روز دختران', 'is_holiday': False}],
+        '5': [{'description': 'تجلیل از امامزادگان و بقاع متبرکه', 'is_holiday': False},
+              {'description': 'بزرگداشت حضرت صالح بن موسی کاظم (ع)', 'is_holiday': False}],
+        '6': [{'description': 'بزرگداشت حضرت احمد بن موسی شاهچراغ (ع)', 'is_holiday': False}],
         '11': [{'description': 'ولادت امام رضا علیه السلام', 'is_holiday': False}],
         '30': [{'description': 'شهادت امام محمد تقی علیه السلام', 'is_holiday': False}]
     },
