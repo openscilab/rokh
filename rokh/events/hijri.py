@@ -4,9 +4,15 @@
 EVENTS = {
     # ٱلْمُحَرَّم
     "1": {
+        '1': [{'description': 'آغاز سال جدید هجری قمری', 'is_holiday': False},
+              {'description': 'بزرگداشت محتشم کاشانی', 'is_holiday': False},
+              {'description': 'روز شعر و ادبیات آیینی', 'is_holiday': False}],
+        '2': [{'description': 'روز امر به معروف و نهی از منکر', 'is_holiday': False}],
         '9': [{'description': 'تاسوعای حسینی', 'is_holiday': True}],
         '10': [{'description': 'عاشورای حسینی', 'is_holiday': True}],
-        '12': [{'description': 'شهادت امام زین العابدین علیه السلام', 'is_holiday': False}]
+        '11': [{'description': 'تجلیل از اسرا و مفقودان', 'is_holiday': False}],
+        '12': [{'description': 'شهادت امام زین العابدین علیه السلام', 'is_holiday': False}],
+        '25': [{'description': 'شهادت امام زین‌العابدین (ع) به روایتی', 'is_holiday': False}]
     },
     # صَفَر
     "2": {
