@@ -88,12 +88,17 @@ EVENTS = {
     },
     # ذُو ٱلْحِجَّة
     "12": {
+        '1': [{'description': 'سالروز ازدواج حضرت علی (ع) و حضرت فاطمه (س) و روز ازدواج', 'is_holiday': False}],
+        '6': [{'description': 'شهادت زائران خانه خدا به دست مأموران آل سعود', 'is_holiday': False}],
         '7': [{'description': 'شهادت امام محمد باقر علیه السلام', 'is_holiday': False}],
         '9': [{'description': 'روز عرفه', 'is_holiday': False}],
-        '10': [{'description': 'عید سعید قربان', 'is_holiday': True}],
+        '10': [{'description': 'عید سعید قربان', 'is_holiday': True},
+               {'description': 'آغاز دهه امامت و ولایت', 'is_holiday': False}],
         '15': [{'description': 'ولادت امام علی النقی علیه السلام', 'is_holiday': False}],
         '18': [{'description': 'عید سعید غدیر خم', 'is_holiday': True}],
-        '20': [{'description': 'ولادت امام موسی کاظم علیه السلام', 'is_holiday': False}]
+        '20': [{'description': 'ولادت امام موسی کاظم علیه السلام', 'is_holiday': False}],
+        '24': [{'description': 'مباهله پیامبر اسلام (ص)', 'is_holiday': False}],
+        '25': [{'description': 'روز خانواده و تکریم بازنشستگان', 'is_holiday': False}],
     }
 }
 
