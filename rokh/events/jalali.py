@@ -33,8 +33,7 @@ EVENTS = {
         '25': [{'description': 'روز بزرگداشت عطار نیشابوری', 'is_holiday': False}],
         '27': [{'description': 'روز فرهنگ پهلوانی و ورزش زورخانه‌ای', 'is_holiday': False},],
         '29': [{'description': 'روز ارتش جمهوری اسلامی ایران', 'is_holiday': False}],
-        '30': [{'description': 'روز علوم آزمایشگاهی، زاد‌روز حکیم سید اسماعیل جرجانی', 'is_holiday': False},
-               {'description': 'روز آزمایشگاهیان', 'is_holiday': False}],
+        '30': [{'description': 'روز علوم آزمایشگاهی، زاد‌روز حکیم سید اسماعیل جرجانی', 'is_holiday': False}],
         '31': [{'description': 'روز گندم و نان', 'is_holiday': False}]
     },
     # اردیبهشت
@@ -156,7 +155,6 @@ EVENTS = {
         '11': [{'description': 'درگذشت کیخسرو شاهرخ، بنیانگذار آرامگاه فردوسی و کتابخانه مجلس شورای ملی و مدیر عامل شرکت سهامی تلفن', 'is_holiday': False},
                {'description': 'شهادت آیت‌الله صدوقی', 'is_holiday': False}],
         '12': [{'description': 'شلیک به پرواز 655 ایران ایر توسط ناو وینسنس [ 1367 خورشیدی ]', 'is_holiday': False},
-               {'description': 'حمله ناوگان آمریکا به هواپیمای مسافربری جمهوری اسلامی ایران', 'is_holiday': False},
                {'description': 'روز افشای حقوق بشر آمریکایی', 'is_holiday': False},
                {'description': 'بزرگداشت علامه امینی', 'is_holiday': False},
                {'description': 'حمایت از تولید ملی و مبارزه با قاچاق کالا', 'is_holiday': False},
