@@ -31,7 +31,6 @@ EVENTS = {
                {'description': 'تأسیس بنیاد مسکن انقلاب اسلامی', 'is_holiday': False}],
         '23': [{'description': 'روز دندانپزشک', 'is_holiday': False}],
         '25': [{'description': 'روز بزرگداشت عطار نیشابوری', 'is_holiday': False}],
-        '27': [{'description': 'روز فرهنگ پهلوانی و ورزش زورخانه‌ای', 'is_holiday': False},],
         '29': [{'description': 'روز ارتش جمهوری اسلامی ایران', 'is_holiday': False}],
         '30': [{'description': 'روز علوم آزمایشگاهی، زاد‌روز حکیم سید اسماعیل جرجانی', 'is_holiday': False}],
         '31': [{'description': 'روز گندم و نان', 'is_holiday': False}]
