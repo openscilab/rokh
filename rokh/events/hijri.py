@@ -4,9 +4,15 @@
 EVENTS = {
     # ٱلْمُحَرَّم
     "1": {
+        '1': [{'description': 'آغاز سال جدید هجری قمری', 'is_holiday': False},
+              {'description': 'بزرگداشت محتشم کاشانی', 'is_holiday': False},
+              {'description': 'روز شعر و ادبیات آیینی', 'is_holiday': False}],
+        '2': [{'description': 'روز امر به معروف و نهی از منکر', 'is_holiday': False}],
         '9': [{'description': 'تاسوعای حسینی', 'is_holiday': True}],
         '10': [{'description': 'عاشورای حسینی', 'is_holiday': True}],
-        '12': [{'description': 'شهادت امام زین العابدین علیه السلام', 'is_holiday': False}]
+        '11': [{'description': 'تجلیل از اسرا و مفقودان', 'is_holiday': False}],
+        '12': [{'description': 'شهادت امام زین العابدین علیه السلام', 'is_holiday': False}],
+        '25': [{'description': 'شهادت امام زین‌العابدین (ع) به روایتی', 'is_holiday': False}]
     },
     # صَفَر
     "2": {
@@ -74,22 +80,31 @@ EVENTS = {
     "10": {
         '1': [{'description': 'عید سعید فطر', 'is_holiday': True}],
         '2': [{'description': 'تعطیل به مناسبت عید سعید فطر', 'is_holiday': True}],
+        '17': [{'description': 'روز فرهنگ پهلوانی و ورزش زورخانه‌ای', 'is_holiday': False}],
         '25': [{'description': 'شهادت امام جعفر صادق علیه السلام', 'is_holiday': True}]
     },
     # ذُو ٱلْقَعْدَة
     "11": {
         '1': [{'description': 'ولادت حضرت معصومه سلام الله علیها و روز دختران', 'is_holiday': False}],
+        '5': [{'description': 'تجلیل از امامزادگان و بقاع متبرکه', 'is_holiday': False},
+              {'description': 'بزرگداشت حضرت صالح بن موسی کاظم (ع)', 'is_holiday': False}],
+        '6': [{'description': 'بزرگداشت حضرت احمد بن موسی شاهچراغ (ع)', 'is_holiday': False}],
         '11': [{'description': 'ولادت امام رضا علیه السلام', 'is_holiday': False}],
         '30': [{'description': 'شهادت امام محمد تقی علیه السلام', 'is_holiday': False}]
     },
     # ذُو ٱلْحِجَّة
     "12": {
+        '1': [{'description': 'سالروز ازدواج حضرت علی (ع) و حضرت فاطمه (س) و روز ازدواج', 'is_holiday': False}],
+        '6': [{'description': 'شهادت زائران خانه خدا به دست مأموران آل سعود', 'is_holiday': False}],
         '7': [{'description': 'شهادت امام محمد باقر علیه السلام', 'is_holiday': False}],
         '9': [{'description': 'روز عرفه', 'is_holiday': False}],
-        '10': [{'description': 'عید سعید قربان', 'is_holiday': True}],
+        '10': [{'description': 'عید سعید قربان', 'is_holiday': True},
+               {'description': 'آغاز دهه امامت و ولایت', 'is_holiday': False}],
         '15': [{'description': 'ولادت امام علی النقی علیه السلام', 'is_holiday': False}],
         '18': [{'description': 'عید سعید غدیر خم', 'is_holiday': True}],
-        '20': [{'description': 'ولادت امام موسی کاظم علیه السلام', 'is_holiday': False}]
+        '20': [{'description': 'ولادت امام موسی کاظم علیه السلام', 'is_holiday': False}],
+        '24': [{'description': 'مباهله پیامبر اسلام (ص)', 'is_holiday': False}],
+        '25': [{'description': 'روز خانواده و تکریم بازنشستگان', 'is_holiday': False}],
     }
 }
 
