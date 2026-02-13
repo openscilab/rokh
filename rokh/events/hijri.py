@@ -16,7 +16,11 @@ EVENTS = {
     },
     # صَفَر
     "2": {
+        '3': [{'description': 'ولادت امام محمدباقر (ع) به روایتی', 'is_holiday': False}],
+        '7': [{'description': 'شهادت امام حسن مجتبی (ع) به روایتی', 'is_holiday': False},
+              {'description': 'بزرگداشت سلمان فارسی', 'is_holiday': False}],
         '20': [{'description': 'اربعین حسینی', 'is_holiday': True}],
+        '27': [{'description': 'روز وقف', 'is_holiday': False}],
         '28': [{'description': 'رحلت رسول اکرم', 'is_holiday': True},
                {'description': 'شهادت امام حسن مجتبی علیه السلام', 'is_holiday': True}],
         '30': [{'description': 'شهادت امام رضا علیه السلام', 'is_holiday': True}]
