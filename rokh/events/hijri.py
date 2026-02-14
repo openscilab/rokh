@@ -40,6 +40,7 @@ EVENTS = {
     },
     # رَبِيع ٱلثَّانِي
     "4": {
+        '4': [{'description': 'ولادت حضرت عبدالعظیم حسنی (ع)', 'is_holiday': False}],
         '8': [{'description': 'ولادت امام حسن عسکری علیه السلام', 'is_holiday': False}],
         '10': [{'description': 'وفات حضرت معصومه سلام الله علیها', 'is_holiday': False}]
     },
