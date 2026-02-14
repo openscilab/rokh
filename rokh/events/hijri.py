@@ -28,10 +28,15 @@ EVENTS = {
     # رَبِيع ٱلْأَوَّل
     "3": {
         '1': [{'description': 'هجرت پیامبر اکرم از مکه به مدینه', 'is_holiday': False}],
-        '8': [{'description': 'شهادت امام حسن عسکری علیه السلام', 'is_holiday': True}],
-        '12': [{'description': 'میلاد رسول اکرم به روایت اهل سنت', 'is_holiday': False}],
+        '8': [{'description': 'شهادت امام حسن عسکری علیه السلام', 'is_holiday': True},
+              {'description': 'آغاز امامت حضرت ولیعصر (عج)', 'is_holiday': True}],
+        '12': [{'description': 'میلاد رسول اکرم به روایت اهل سنت', 'is_holiday': False},
+               {'description': 'آغاز هفته وحدت', 'is_holiday': False}],
+        '14': [{'description': 'روز سیستان و بلوچستان', 'is_holiday': False}],
         '17': [{'description': 'میلاد رسول اکرم', 'is_holiday': True},
-               {'description': 'ولادت امام جعفر صادق علیه السلام', 'is_holiday': True}]
+               {'description': 'ولادت امام جعفر صادق علیه السلام', 'is_holiday': True},
+               {'description': 'روز اخلاق و مهرورزی', 'is_holiday': False}],
+        '23': [{'description': 'روز قم', 'is_holiday': False}]
     },
     # رَبِيع ٱلثَّانِي
     "4": {
