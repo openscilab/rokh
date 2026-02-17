@@ -433,8 +433,7 @@ EVENTS = {
     # August
     "8": {
         '1': [{'description': 'آغاز هفته جهانی شیردهی', 'is_holiday': False},
-              {'description': 'زادروز ژان باتیست لامارک زیست‌شناس فرانسوی', 'is_holiday': False},
-              {'description': 'روز جهانی شیر مادر', 'is_holiday': False}],
+              {'description': 'زادروز ژان باتیست لامارک زیست‌شناس فرانسوی', 'is_holiday': False}],
         '2': [{'description': 'درگذشت الکساندر گراهام بل دانشمند بریتانیایی، مخترع تلفن', 'is_holiday': False},
               {'description': 'درگذشت ریموند کِلِوی کاروِر جونیور نویسندهٔ داستان‌های کوتاه و شاعر آمریکایی', 'is_holiday': False}],
         '3': [{'description': 'درگذشت ریچارد ویلشتتر شیمیدان آلمانی، برندهٔ جایزه نوبل شیمی سال ۱۹۱۵', 'is_holiday': False},
