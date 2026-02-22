@@ -207,7 +207,6 @@ EVENTS = {
         '26': [{'description': 'سالروز ورود آزادگانِ سرافراز به وطن', 'is_holiday': False}],
         '28': [{'description': 'سالروز وقایع 28 مرداد پس از برکناری محمد مصدق', 'is_holiday': False},
                {'description': 'سالروز فاجعه آتش زدن سینما رکس آبادان', 'is_holiday': False},
-               {'description': 'کودتای آمریکا برای بازگرداندن شاه', 'is_holiday': False},
                {'description': 'گشایش مجلس خبرگان', 'is_holiday': False}],
         '30': [{'description': 'روز پزشک', 'is_holiday': False},
                {'description': 'زادروز ابن سینا پزشک و شاعر و از مشهورترین و تاثیرگذارترینِ فیلسوفان و دانشمندان ایران‌زمین', 'is_holiday': False},
