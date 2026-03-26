@@ -16,7 +16,11 @@ EVENTS = {
     },
     # صَفَر
     "2": {
+        '3': [{'description': 'ولادت امام محمدباقر (ع) به روایتی', 'is_holiday': False}],
+        '7': [{'description': 'شهادت امام حسن مجتبی (ع) به روایتی', 'is_holiday': False},
+              {'description': 'بزرگداشت سلمان فارسی', 'is_holiday': False}],
         '20': [{'description': 'اربعین حسینی', 'is_holiday': True}],
+        '27': [{'description': 'روز وقف', 'is_holiday': False}],
         '28': [{'description': 'رحلت رسول اکرم', 'is_holiday': True},
                {'description': 'شهادت امام حسن مجتبی علیه السلام', 'is_holiday': True}],
         '30': [{'description': 'شهادت امام رضا علیه السلام', 'is_holiday': True}]
@@ -24,19 +28,26 @@ EVENTS = {
     # رَبِيع ٱلْأَوَّل
     "3": {
         '1': [{'description': 'هجرت پیامبر اکرم از مکه به مدینه', 'is_holiday': False}],
-        '8': [{'description': 'شهادت امام حسن عسکری علیه السلام', 'is_holiday': True}],
-        '12': [{'description': 'میلاد رسول اکرم به روایت اهل سنت', 'is_holiday': False}],
+        '8': [{'description': 'شهادت امام حسن عسکری علیه السلام', 'is_holiday': True},
+              {'description': 'آغاز امامت حضرت ولیعصر (عج)', 'is_holiday': True}],
+        '12': [{'description': 'میلاد رسول اکرم به روایت اهل سنت', 'is_holiday': False},
+               {'description': 'آغاز هفته وحدت', 'is_holiday': False}],
+        '14': [{'description': 'روز سیستان و بلوچستان', 'is_holiday': False}],
         '17': [{'description': 'میلاد رسول اکرم', 'is_holiday': True},
-               {'description': 'ولادت امام جعفر صادق علیه السلام', 'is_holiday': True}]
+               {'description': 'ولادت امام جعفر صادق علیه السلام', 'is_holiday': True},
+               {'description': 'روز اخلاق و مهرورزی', 'is_holiday': False}],
+        '23': [{'description': 'روز قم', 'is_holiday': False}]
     },
     # رَبِيع ٱلثَّانِي
     "4": {
+        '4': [{'description': 'ولادت حضرت عبدالعظیم حسنی (ع)', 'is_holiday': False}],
         '8': [{'description': 'ولادت امام حسن عسکری علیه السلام', 'is_holiday': False}],
         '10': [{'description': 'وفات حضرت معصومه سلام الله علیها', 'is_holiday': False}]
     },
     # جُمَادَىٰ ٱلْأُولَىٰ
     "5": {
-        '5': [{'description': 'ولادت حضرت زینب سلام الله علیها و روز پرستار و بهورز', 'is_holiday': False}]
+        '5': [{'description': 'ولادت حضرت زینب سلام الله علیها و روز پرستار و بهورز', 'is_holiday': False}],
+        '13': [{'description': 'شهادت حضرت فاطمه زهرا (س) به روایتی', 'is_holiday': False}]
     },
     # جُمَادَىٰ ٱلثَّانِيَة
     "6": {
