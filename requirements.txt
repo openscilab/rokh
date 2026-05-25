@@ -1,2 +1,2 @@
-jdatetime>=3.8.2
+jdatetime>=5.3.0
 hijridate>=2.3.0
