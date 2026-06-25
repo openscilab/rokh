@@ -1,16 +1,6 @@
 # -*- coding: utf-8 -*-
 """Setup module."""
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
-
-
-def get_requires() -> list:
-    """Read requirements.txt."""
-    requirements = open("requirements.txt", "r").read()
-    return list(filter(lambda x: x != "", requirements.split()))
-
+from setuptools import setup
 
 def read_description() -> str:
     """Read README.md and CHANGELOG.md."""
@@ -40,11 +30,14 @@ setup(
     author_email='rokh@openscilab.com',
     url='https://github.com/openscilab/rokh',
     download_url='https://github.com/openscilab/rokh/tarball/v0.4',
-    keywords="events date date-system calendar gregorian hijri jalali",
+    keywords='events date date-system calendar gregorian hijri jalali',
     project_urls={
-            'Source': 'https://github.com/openscilab/rokh',
+        'Source': 'https://github.com/openscilab/rokh',
     },
-    install_requires=get_requires(),
+    install_requires=[
+        'jdatetime>=3.8.2',
+        'hijridate>=2.3.0'
+    ],
     python_requires='>=3.7',
     classifiers=[
         'Development Status :: 3 - Alpha',
