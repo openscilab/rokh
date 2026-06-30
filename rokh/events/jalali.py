@@ -279,7 +279,8 @@ EVENTS = {
     "7": {
         '1': [{'description': 'زادروز محمدرضا شجریان خواننده، موسیقی‌دان و خوشنویس ایرانی', 'is_holiday': False},
               {'description': 'زادروز حسین منزوی شاعر ایرانی', 'is_holiday': False},
-              {'description': 'آغاز حمله مغول به ایران در پاییز 598 خورشیدی', 'is_holiday': False}],
+              {'description': 'آغاز حمله مغول به ایران در پاییز 598 خورشیدی', 'is_holiday': False},
+              {'description': 'روز پرچم', 'is_holiday': False},],
         '2': [{'description': 'بزرگداشت شهدای منا', 'is_holiday': False}],
         '3': [{'description': 'انحلال حزب رستاخیز', 'is_holiday': False}],
         '4': [{'description': 'تأسیس باشگاه فوتبال استقلال (تاج)', 'is_holiday': False},
