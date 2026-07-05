@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Changed
 - Dependencies structure modified
+- Test system modified
 - Jalali events updated
 ## [0.4] - 2026-04-29
 ### Added
