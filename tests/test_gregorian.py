@@ -1,4 +1,4 @@
-from rokh import get_events, get_today_events, DateSystem
+from rokh import get_events, get_today_events, is_holiday, DateSystem
 from rokh.events.jalali import EVENTS as JALALI_EVENTS
 from rokh.events.gregorian import EVENTS as GREGORIAN_EVENTS
 from rokh.events.hijri import EVENTS as HIJRI_EVENTS
@@ -229,3 +229,24 @@ def test_get_today_events_all():
     assert result["events"]["gregorian"] == GREGORIAN_EVENTS.get(str(month), {}).get(str(day), [])
     assert result["events"]["jalali"] == JALALI_EVENTS.get(str(j.jmonth), {}).get(str(j.jday), [])
     assert result["events"]["hijri"] == HIJRI_EVENTS.get(str(h.month), {}).get(str(h.day), [])
+
+
+def test_is_holiday_gregorian():
+    month = 4
+    day = 2
+    year = 2025
+    result = is_holiday(day, month, year,
+                        input_date_system=DateSystem.GREGORIAN)
+    assert result == True
+    result = is_holiday(day, month, year,
+                        input_date_system=DateSystem.GREGORIAN,
+                        event_date_system=DateSystem.JALALI)
+    assert result == True
+    result = is_holiday(day, month, year,
+                        input_date_system=DateSystem.GREGORIAN,
+                        event_date_system=DateSystem.GREGORIAN)
+    assert result == False
+    result = is_holiday(day, month, year,
+                        input_date_system=DateSystem.GREGORIAN,
+                        event_date_system=DateSystem.HIJRI)
+    assert result == False
