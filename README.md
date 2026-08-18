@@ -141,6 +141,15 @@ Use `get_today_events` to retrieve today events.
 # }
 ```
 
+### Is holiday
+
+Use `is_holiday` to see if a day is holiday.
+
+```pycon
+>>> from rokh import is_holiday, DateSystem
+>>> is_holiday(13, 1, 1450, DateSystem.JALALI, DateSystem.JALALI)
+True
+```
 
 ## Issues & bug reports
 
