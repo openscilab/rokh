@@ -210,3 +210,27 @@ def get_today_events(event_date_system: Optional[DateSystem] = None) -> Dict[str
         year=today.year,
         input_date_system=DateSystem.GREGORIAN,
         event_date_system=event_date_system)
+
+
+def is_holiday(
+    day: int,
+    month: int,
+    year: Optional[int] = None,
+    input_date_system: DateSystem = DateSystem.JALALI,
+    event_date_system: Optional[DateSystem] = None) -> bool:
+    """
+    Determine if a specific day, month and year in the specified date system is holiday.
+
+    :param day: day in input date system
+    :param month: month in input date system
+    :param year: year in input date system
+    :param input_date_system: input date system
+    :param event_date_system: event date system
+    """
+    events = get_events(
+        day=day,
+        month=month,
+        year=year,
+        input_date_system=input_date_system,
+        event_date_system=event_date_system)
+    return events["is_holiday"]
