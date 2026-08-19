@@ -147,7 +147,7 @@ Use `is_holiday` to see if a day is holiday.
 
 ```pycon
 >>> from rokh import is_holiday, DateSystem
->>> is_holiday(13, 1, 1450, DateSystem.JALALI, DateSystem.JALALI)
+>>> is_holiday(day=13, month=1, year=1450, event_date_system=DateSystem.JALALI)
 True
 ```
 
