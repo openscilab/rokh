@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Dependencies structure modified
 - Test system modified
 - Jalali events updated
+- `README.md` updated
 ## [0.4] - 2026-04-29
 ### Added
 - Bahesab calendar events
