@@ -128,7 +128,7 @@ def test_get_events_hijri_all_current_year():
     assert result["events"]["hijri"] == HIJRI_EVENTS.get(str(month), {}).get(str(day), [])
 
 
-def test_is_holiday_gregorian():
+def test_is_holiday_hijri():
     month = 10
     day = 4
     year = 1446
