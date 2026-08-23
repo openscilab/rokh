@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - `is_holiday` function
+- `is_today_holiday` function
 ### Changed
 - Dependencies structure modified
 - Test system modified

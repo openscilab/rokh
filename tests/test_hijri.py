@@ -1,4 +1,4 @@
-from rokh import get_events, is_holiday, DateSystem
+from rokh import get_events, is_holiday, is_today_holiday, DateSystem
 from rokh.events.jalali import EVENTS as JALALI_EVENTS
 from rokh.events.gregorian import EVENTS as GREGORIAN_EVENTS
 from rokh.events.hijri import EVENTS as HIJRI_EVENTS
@@ -147,3 +147,15 @@ def test_is_holiday_hijri():
                         input_date_system=DateSystem.HIJRI,
                         event_date_system=DateSystem.HIJRI)
     assert result == False
+
+
+def test_is_today_holiday_hijri():
+    today = datetime.datetime.now()
+    g = hijridate.Gregorian(today.year, today.month, today.day).to_hijri()
+    month = g.month
+    day = g.day
+    year = g.year
+    result = is_today_holiday(event_date_system=DateSystem.HIJRI)
+    assert result == is_holiday(day, month, year,
+                                input_date_system=DateSystem.HIJRI,
+                                event_date_system=DateSystem.HIJRI)
