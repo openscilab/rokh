@@ -151,6 +151,16 @@ Use `is_holiday` to see if a day is holiday.
 True
 ```
 
+### Is today holiday
+
+Use `is_today_holiday` to see if today is a holiday.
+
+```pycon
+>>> from rokh import is_today_holiday, DateSystem
+>>> is_holiday(event_date_system=DateSystem.JALALI)
+True
+```
+
 ## Issues & bug reports
 
 Just fill an issue and describe it. We'll check it ASAP! or send an email to [rokh@openscilab.com](mailto:rokh@openscilab.com "rokh@openscilab.com"). 
