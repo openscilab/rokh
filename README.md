@@ -156,8 +156,8 @@ True
 Use `is_today_holiday` to see if today is a holiday.
 
 ```pycon
->>> from rokh import is_today_holiday, DateSystem
->>> is_holiday()
+>>> from rokh import is_today_holiday
+>>> is_today_holiday()
 True
 ```
 
