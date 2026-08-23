@@ -234,3 +234,13 @@ def is_holiday(
         input_date_system=input_date_system,
         event_date_system=event_date_system)
     return events["is_holiday"]
+
+
+def is_today_holiday(event_date_system: Optional[DateSystem] = None) -> bool:
+    """
+    Determine if today is holiday in the specified date system.
+
+    :param event_date_system: event date system
+    """
+    events = get_today_events(event_date_system=event_date_system)
+    return events["is_holiday"]
