@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Initialize the rokh package."""
 
-from .functions import get_events, get_today_events, is_holiday
+from .functions import get_events, get_today_events, is_holiday, is_today_holiday
 from .errors import RokhValidationError
 from .params import ROKH_VERSION, DateSystem
 
