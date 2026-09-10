@@ -115,17 +115,17 @@ def _validate_get_events(
     :param event_date_system: event date system
     """
     if year is not None:
-        if not isinstance(year, int):
+        if isinstance(year, bool) or not isinstance(year, int):
             raise RokhValidationError(YEAR_VALUE_ERROR)
         if year <= 0:
             raise RokhValidationError(YEAR_VALUE_ERROR)
 
-    if not isinstance(month, int):
+    if isinstance(month, bool) or not isinstance(month, int):
         raise RokhValidationError(MONTH_VALUE_ERROR)
     if not 1 <= month <= 12:
         raise RokhValidationError(MONTH_VALUE_ERROR)
 
-    if not isinstance(day, int):
+    if isinstance(day, bool) or not isinstance(day, int):
         raise RokhValidationError(DAY_VALUE_ERROR)
     if not 1 <= day <= 31:
         raise RokhValidationError(DAY_VALUE_ERROR)
