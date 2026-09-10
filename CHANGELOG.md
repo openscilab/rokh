@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Test system modified
 - Jalali events updated
 - `README.md` updated
+- Validation system modified
 ## [0.4] - 2026-04-29
 ### Added
 - Bahesab calendar events
