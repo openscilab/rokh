@@ -99,6 +99,30 @@ def _get_hijri_events(day: int, month: int, year: Optional[int]= None) -> List[D
     return HIJRI_EVENTS.get(str(month), {}).get(str(day), [])
 
 
+def _validate_date(
+    day: int,
+    month: int,
+    year: int,
+    input_date_system: DateSystem) -> None:
+    """
+    Validate that a date actually exists in its calendar.
+    
+    :param day: day in input date system
+    :param month: month in input date system
+    :param year: year in input date system
+    :param input_date_system: input date system
+    """
+    try:
+        _convert_to_gregorian(
+            input_date_system=input_date_system,
+            day=day,
+            month=month,
+            year=year,
+        )
+    except (ValueError, TypeError, OverflowError) as exc:
+        raise RokhValidationError(INVALID_DATE_ERROR) from exc
+
+
 def _validate_get_events(
         day: Any,
         month: Any,
