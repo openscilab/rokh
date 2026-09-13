@@ -160,6 +160,16 @@ def _validate_get_events(
     if event_date_system is not None:
         if not isinstance(event_date_system, DateSystem):
             raise RokhValidationError(EVENT_DATE_SYSTEM_TYPE_ERROR)
+    
+    if year is None:
+        year = _get_current_year(date_system=input_date_system)
+
+    _validate_date(
+        day=day,
+        month=month,
+        year=year,
+        input_date_system=input_date_system,
+    )
 
 
 def get_events(
