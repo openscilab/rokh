@@ -119,6 +119,8 @@ def _validate_date(
             month=month,
             year=year,
         )
+        _ = _convert_from_gregorian(DateSystem.JALALI, *gregorian_date)
+        _ = _convert_from_gregorian(DateSystem.HIJRI, *gregorian_date)
         converted_date = _convert_from_gregorian(
             target_date_system=input_date_system,
             day=gregorian_date[0],
