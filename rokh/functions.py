@@ -113,14 +113,23 @@ def _validate_date(
     :param input_date_system: input date system
     """
     try:
-        _convert_to_gregorian(
+        gregorian_date = _convert_to_gregorian(
             input_date_system=input_date_system,
             day=day,
             month=month,
             year=year,
         )
+        converted_date = _convert_from_gregorian(
+            target_date_system=input_date_system,
+            day=gregorian_date[0],
+            month=gregorian_date[1],
+            year=gregorian_date[2],
+        )
     except (ValueError, TypeError, OverflowError) as exc:
         raise RokhValidationError(INVALID_DATE_ERROR) from exc
+
+    if converted_date != (day, month, year):
+        raise RokhValidationError(INVALID_DATE_ERROR)
 
 
 def _validate_get_events(
