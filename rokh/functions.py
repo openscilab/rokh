@@ -113,24 +113,13 @@ def _validate_date(
     :param input_date_system: input date system
     """
     try:
-        gregorian_date = _convert_to_gregorian(
-            input_date_system=input_date_system,
-            day=day,
-            month=month,
-            year=year,
-        )
-        _ = _convert_from_gregorian(DateSystem.JALALI, *gregorian_date)
-        _ = _convert_from_gregorian(DateSystem.HIJRI, *gregorian_date)
-        converted_date = _convert_from_gregorian(
-            target_date_system=input_date_system,
-            day=gregorian_date[0],
-            month=gregorian_date[1],
-            year=gregorian_date[2],
-        )
+        result = {DateSystem.GREGORIAN: [], DateSystem.JALALI: [], DateSystem.HIJRI: []}
+        result[DateSystem.GREGORIAN] = _convert_to_gregorian(input_date_system=input_date_system, day=day, month=month, year=year)
+        result[DateSystem.JALALI] = _convert_from_gregorian(DateSystem.JALALI, *result[DateSystem.GREGORIAN])
+        result[DateSystem.HIJRI] = _convert_from_gregorian(DateSystem.HIJRI, *result[DateSystem.GREGORIAN])
     except (ValueError, TypeError, OverflowError) as exc:
         raise RokhValidationError(INVALID_DATE_ERROR) from exc
-
-    if converted_date != (day, month, year):
+    if result[input_date_system] != (day, month, year):
         raise RokhValidationError(INVALID_DATE_ERROR)
 
 
