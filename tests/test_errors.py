@@ -60,20 +60,20 @@ def test_event_date_system_error():
 
 
 def test_date_error1():
-    with pytest.raises(RokhValidationError, match=r"`day`, `month`, and `year` do not represent a valid date"):
+    with pytest.raises(RokhValidationError, match=r"The input date is not valid"):
         _ = get_events(year=1404, month=12, day=31, input_date_system=DateSystem.JALALI)
 
 
 def test_date_error2():
-    with pytest.raises(RokhValidationError, match=r"`day`, `month`, and `year` do not represent a valid date"):
+    with pytest.raises(RokhValidationError, match=r"The input date is not valid"):
         _ = get_events(month=12, day=31, input_date_system=DateSystem.JALALI)
 
 
 def test_date_error3():
-    with pytest.raises(RokhValidationError, match=r"`day`, `month`, and `year` do not represent a valid date"):
+    with pytest.raises(RokhValidationError, match=r"The input date is not valid"):
         _ = get_events(year=2026, month=2, day=31, input_date_system=DateSystem.GREGORIAN)
 
 
 def test_date_error4():
-    with pytest.raises(RokhValidationError, match=r"`day`, `month`, and `year` do not represent a valid date"):
+    with pytest.raises(RokhValidationError, match=r"The input date is not valid"):
         _ = get_events(year=1445, month=12, day=31, input_date_system=DateSystem.HIJRI)
