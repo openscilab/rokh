@@ -113,6 +113,8 @@ def _validate_date(
     :param input_date_system: input date system
     """
     try:
+        if year is None:
+            year = _get_current_year(date_system=input_date_system)
         result = {DateSystem.GREGORIAN: [], DateSystem.JALALI: [], DateSystem.HIJRI: []}
         result[DateSystem.GREGORIAN] = _convert_to_gregorian(input_date_system=input_date_system, day=day, month=month, year=year)
         result[DateSystem.JALALI] = _convert_from_gregorian(DateSystem.JALALI, *result[DateSystem.GREGORIAN])
@@ -161,9 +163,6 @@ def _validate_get_events(
         if not isinstance(event_date_system, DateSystem):
             raise RokhValidationError(EVENT_DATE_SYSTEM_TYPE_ERROR)
     
-    if year is None:
-        year = _get_current_year(date_system=input_date_system)
-
     _validate_date(
         day=day,
         month=month,
