@@ -99,6 +99,19 @@ def _get_hijri_events(day: int, month: int, year: Optional[int]= None) -> List[D
     return HIJRI_EVENTS.get(str(month), {}).get(str(day), [])
 
 
+def _has_holiday(events: Dict[str, List[Dict[str, str]]]) -> bool:
+    """
+    Determine if any event is a holiday.
+
+    :param events: events grouped by date system
+    """
+    return any(
+        event["is_holiday"]
+        for date_events in events.values()
+        for event in date_events
+    )
+
+
 def _validate_date(
     day: int,
     month: int,
