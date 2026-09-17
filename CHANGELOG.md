@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - `is_holiday` function
 - `is_today_holiday` function
+- `_validate_date` function
 ### Changed
 - Dependencies structure modified
 - Test system modified

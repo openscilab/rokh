@@ -6,7 +6,7 @@ from .events.gregorian import EVENTS as GREGORIAN_EVENTS
 from .events.hijri import EVENTS as HIJRI_EVENTS
 from .errors import RokhValidationError
 from .params import DateSystem
-from .params import YEAR_VALUE_ERROR, MONTH_VALUE_ERROR, DAY_VALUE_ERROR
+from .params import YEAR_VALUE_ERROR, MONTH_VALUE_ERROR, DAY_VALUE_ERROR, INVALID_DATE_ERROR
 from .params import INPUT_DATE_SYSTEM_TYPE_ERROR, EVENT_DATE_SYSTEM_TYPE_ERROR
 import datetime
 import jdatetime
@@ -99,6 +99,32 @@ def _get_hijri_events(day: int, month: int, year: Optional[int]= None) -> List[D
     return HIJRI_EVENTS.get(str(month), {}).get(str(day), [])
 
 
+def _validate_date(
+    day: int,
+    month: int,
+    year: int,
+    input_date_system: DateSystem) -> None:
+    """
+    Validate that a date actually exists in its calendar.
+    
+    :param day: day in input date system
+    :param month: month in input date system
+    :param year: year in input date system
+    :param input_date_system: input date system
+    """
+    try:
+        if year is None:
+            year = _get_current_year(date_system=input_date_system)
+        result = {DateSystem.GREGORIAN: [], DateSystem.JALALI: [], DateSystem.HIJRI: []}
+        result[DateSystem.GREGORIAN] = _convert_to_gregorian(input_date_system=input_date_system, day=day, month=month, year=year)
+        result[DateSystem.JALALI] = _convert_from_gregorian(DateSystem.JALALI, *result[DateSystem.GREGORIAN])
+        result[DateSystem.HIJRI] = _convert_from_gregorian(DateSystem.HIJRI, *result[DateSystem.GREGORIAN])
+    except (ValueError, TypeError, OverflowError) as exc:
+        raise RokhValidationError(INVALID_DATE_ERROR) from exc
+    if result[input_date_system] != (day, month, year):
+        raise RokhValidationError(INVALID_DATE_ERROR)
+
+
 def _validate_get_events(
         day: Any,
         month: Any,
@@ -136,6 +162,13 @@ def _validate_get_events(
     if event_date_system is not None:
         if not isinstance(event_date_system, DateSystem):
             raise RokhValidationError(EVENT_DATE_SYSTEM_TYPE_ERROR)
+    
+    _validate_date(
+        day=day,
+        month=month,
+        year=year,
+        input_date_system=input_date_system,
+    )
 
 
 def get_events(
