@@ -232,13 +232,7 @@ def get_events(
             result["events"]["gregorian"] = _get_gregorian_events(*gregorian_date)
         elif event_date_system == DateSystem.HIJRI:
             result["events"]["hijri"] = _get_hijri_events(*hijri_date)
-    for date_system in result["events"]:
-        for event in result["events"][date_system]:
-            if event["is_holiday"]:
-                result["is_holiday"] = True
-                break
-        if result["is_holiday"]:
-            break
+    result["is_holiday"] = _has_holiday(result["events"])
     return result
 
 
