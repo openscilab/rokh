@@ -9,7 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `is_holiday` function
 - `is_today_holiday` function
 - `_validate_date` function
+- `_has_holiday` function
 ### Changed
+- `get_events` function modified
 - Dependencies structure modified
 - Test system modified
 - Jalali events updated
