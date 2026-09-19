@@ -88,7 +88,7 @@ def _get_gregorian_events(day: int, month: int, year: Optional[int]= None) -> Li
     return GREGORIAN_EVENTS.get(str(month), {}).get(str(day), [])
 
 
-def _get_hijri_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, str]]:
+def _get_hijri_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, Union[str, bool]]]:
     """
     Retrieve Hijri events for a specific date.
 
