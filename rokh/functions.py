@@ -66,7 +66,7 @@ def _get_current_year(date_system: DateSystem) -> int:
     return today_converted[2]
 
 
-def _get_jalali_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, str]]:
+def _get_jalali_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, Union[str, bool]]]:
     """
     Retrieve Jalali events for a specific date.
 
