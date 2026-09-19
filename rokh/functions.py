@@ -77,7 +77,7 @@ def _get_jalali_events(day: int, month: int, year: Optional[int]= None) -> List[
     return JALALI_EVENTS.get(str(month), {}).get(str(day), [])
 
 
-def _get_gregorian_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, str]]:
+def _get_gregorian_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, Union[str, bool]]]:
     """
     Retrieve Gregorian events for a specific date.
 
