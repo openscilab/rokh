@@ -99,7 +99,7 @@ def _get_hijri_events(day: int, month: int, year: Optional[int]= None) -> List[D
     return HIJRI_EVENTS.get(str(month), {}).get(str(day), [])
 
 
-def _has_holiday(events: Dict[str, List[Dict[str, str]]]) -> bool:
+def _has_holiday(events: Dict[str, List[Dict[str, Union[str, bool]]]]) -> bool:
     """
     Determine if any event is a holiday.
 
