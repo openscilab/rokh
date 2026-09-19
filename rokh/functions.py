@@ -115,7 +115,7 @@ def _has_holiday(events: Dict[str, List[Dict[str, Union[str, bool]]]]) -> bool:
 def _validate_date(
     day: int,
     month: int,
-    year: int,
+    year: Optional[int],
     input_date_system: DateSystem) -> None:
     """
     Validate that a date actually exists in its calendar.
