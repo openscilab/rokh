@@ -66,7 +66,7 @@ def _get_current_year(date_system: DateSystem) -> int:
     return today_converted[2]
 
 
-def _get_jalali_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, str]]:
+def _get_jalali_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, Union[str, bool]]]:
     """
     Retrieve Jalali events for a specific date.
 
@@ -77,7 +77,7 @@ def _get_jalali_events(day: int, month: int, year: Optional[int]= None) -> List[
     return JALALI_EVENTS.get(str(month), {}).get(str(day), [])
 
 
-def _get_gregorian_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, str]]:
+def _get_gregorian_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, Union[str, bool]]]:
     """
     Retrieve Gregorian events for a specific date.
 
@@ -88,7 +88,7 @@ def _get_gregorian_events(day: int, month: int, year: Optional[int]= None) -> Li
     return GREGORIAN_EVENTS.get(str(month), {}).get(str(day), [])
 
 
-def _get_hijri_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, str]]:
+def _get_hijri_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, Union[str, bool]]]:
     """
     Retrieve Hijri events for a specific date.
 
@@ -99,7 +99,7 @@ def _get_hijri_events(day: int, month: int, year: Optional[int]= None) -> List[D
     return HIJRI_EVENTS.get(str(month), {}).get(str(day), [])
 
 
-def _has_holiday(events: Dict[str, List[Dict[str, str]]]) -> bool:
+def _has_holiday(events: Dict[str, List[Dict[str, Union[str, bool]]]]) -> bool:
     """
     Determine if any event is a holiday.
 
@@ -115,7 +115,7 @@ def _has_holiday(events: Dict[str, List[Dict[str, str]]]) -> bool:
 def _validate_date(
     day: int,
     month: int,
-    year: int,
+    year: Optional[int],
     input_date_system: DateSystem) -> None:
     """
     Validate that a date actually exists in its calendar.
@@ -190,7 +190,7 @@ def get_events(
     year: Optional[int] = None,
     input_date_system: DateSystem = DateSystem.JALALI,
     event_date_system: Optional[DateSystem] = None,
-) -> Dict[str, Union[bool, str, Dict[str, int], Dict[str, List[Dict[str, str]]]]]:
+) -> Dict[str, Union[bool, str, Dict[str, int], List[Dict[str, Union[str, bool]]]]]:
     """
     Retrieve events for a specific day, month and year in the specified date system.
 
@@ -237,7 +237,7 @@ def get_events(
 
 
 def get_today_events(event_date_system: Optional[DateSystem] = None) -> Dict[str,
-                                                                             Union[bool, str, Dict[str, int], Dict[str, List[Dict[str, str]]]]]:
+                                                                             Union[bool, str, Dict[str, int], List[Dict[str, Union[str, bool]]]]]:
     """
     Retrieve today events in the specified date system.
 
