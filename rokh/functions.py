@@ -190,7 +190,7 @@ def get_events(
     year: Optional[int] = None,
     input_date_system: DateSystem = DateSystem.JALALI,
     event_date_system: Optional[DateSystem] = None,
-) -> Dict[str, Union[bool, str, Dict[str, int], List[Dict[str, Union[str, bool]]]]]:
+) -> Dict[str, Union[bool, str, Dict[str, int], Dict[str, List[Dict[str, Union[str, bool]]]]]]:
     """
     Retrieve events for a specific day, month and year in the specified date system.
 
@@ -237,7 +237,7 @@ def get_events(
 
 
 def get_today_events(event_date_system: Optional[DateSystem] = None) -> Dict[str,
-                                                                             Union[bool, str, Dict[str, int], List[Dict[str, Union[str, bool]]]]]:
+                                                                             Union[bool, str, Dict[str, int], Dict[str, List[Dict[str, Union[str, bool]]]]]]:
     """
     Retrieve today events in the specified date system.
 
