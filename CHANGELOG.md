@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+- `RokhError` class
 - `is_holiday` function
 - `is_today_holiday` function
 - `_validate_date` function
