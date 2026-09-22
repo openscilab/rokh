@@ -1,7 +1,13 @@
 import pytest
-from rokh import get_events, DateSystem, RokhValidationError
+from rokh import get_events, DateSystem, RokhValidationError, RokhError
 
 TEST_CASE_NAME = "Errors tests"
+
+
+def test_error_inheritance():
+    assert issubclass(RokhError, Exception)
+    assert issubclass(RokhValidationError, RokhError)
+    assert issubclass(RokhValidationError, ValueError)
 
 
 def test_year_error1():
