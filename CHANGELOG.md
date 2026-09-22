@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `_has_holiday` function
 ### Changed
 - `get_events` function modified
+- Typing modified
 - Dependencies structure modified
 - Test system modified
 - Jalali events updated
