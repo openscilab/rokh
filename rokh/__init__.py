@@ -2,7 +2,7 @@
 """Initialize the rokh package."""
 
 from .functions import get_events, get_today_events, is_holiday, is_today_holiday
-from .errors import RokhValidationError
+from .errors import RokhError, RokhValidationError
 from .params import ROKH_VERSION, DateSystem
 
 __version__ = ROKH_VERSION
@@ -13,6 +13,7 @@ __all__ = [
     "get_today_events",
     "is_holiday",
     "is_today_holiday",
+    "RokhError",
     "RokhValidationError",
     "DateSystem"
     ]
