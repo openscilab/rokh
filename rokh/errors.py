@@ -6,7 +6,5 @@ class RokhError(Exception):
     """Base exception for all Rokh errors."""
 
 
-class RokhValidationError(ValueError):
-    """Base class for validation errors in Rokh."""
-
-    pass
+class RokhValidationError(RokhError, ValueError):
+    """Raised when input validation fails."""
