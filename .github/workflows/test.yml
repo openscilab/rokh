@@ -45,6 +45,10 @@ jobs:
       - name: Test with pytest 
         run: |
           python -m pytest . --cov=rokh --cov-report=term
+      - name: Static type check
+        run: |
+          python -m mypy
+        if: matrix.python-version == env.TEST_PYTHON_VERSION
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
