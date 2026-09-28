@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
 """Parameters for the rokh package."""
 from enum import Enum
+from typing import Dict, Tuple, Union
 
 ROKH_VERSION = "0.4"
+
+EventType = Dict[str, Union[str, bool]]
+DateTupleType = Tuple[int, int, int]
 
 
 class DateSystem(Enum):
