@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 """Gregorian Events."""
+from typing import Dict, List
 
-EVENTS = {
+from ..params import EventType
+
+EVENTS: Dict[str, Dict[str, List[EventType]]] = {
     # January
     "1": {
         '1': [{'description': 'جشن آغاز سال نو میلادی', 'is_holiday': False}],

@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 """Hijri Events."""
+from typing import Dict, List
 
-EVENTS = {
+from ..params import EventType
+
+EVENTS: Dict[str, Dict[str, List[EventType]]] = {
     # ٱلْمُحَرَّم
     "1": {
         '1': [{'description': 'آغاز سال جدید هجری قمری', 'is_holiday': False},
