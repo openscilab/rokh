@@ -22,7 +22,6 @@ In Farsi, Rokh is derived from Rokhdad, meaning "event." Rokh itself also means 
 setup(
     name='rokh',
     packages=['rokh', 'rokh.events'],
-    package_data={'rokh': ['py.typed']},
     version='0.4',
     description="Rokh: Iranian Calendar Events Collection",
     long_description=read_description(),
@@ -61,7 +60,6 @@ setup(
         'Topic :: Education',
         'Topic :: Office/Business :: Scheduling',
         'Topic :: Utilities',
-        'Typing :: Typed',
     ],
     license='MIT',
 )
