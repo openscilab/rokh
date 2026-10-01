@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Functions for the rokh package."""
-from typing import List, Dict, Union, Optional, Any, cast
+from typing import List, Dict, Union, Optional, Any
 from .events.jalali import EVENTS as JALALI_EVENTS
 from .events.gregorian import EVENTS as GREGORIAN_EVENTS
 from .events.hijri import EVENTS as HIJRI_EVENTS
@@ -73,7 +73,7 @@ def _get_jalali_events(day: int, month: int, year: Optional[int]= None) -> List[
     :param month: month in Jalali date system
     :param year: year in Jalali date system
     """
-    month_events = cast(Dict[str, List[EventType]], JALALI_EVENTS.get(str(month), {}))
+    month_events = JALALI_EVENTS.get(str(month), {})
     return month_events.get(str(day), [])
 
 
@@ -85,7 +85,7 @@ def _get_gregorian_events(day: int, month: int, year: Optional[int]= None) -> Li
     :param month: month in Gregorian date system
     :param year: year in Gregorian date system
     """
-    month_events = cast(Dict[str, List[EventType]], GREGORIAN_EVENTS.get(str(month), {}))
+    month_events = GREGORIAN_EVENTS.get(str(month), {})
     return month_events.get(str(day), [])
 
 
@@ -97,7 +97,7 @@ def _get_hijri_events(day: int, month: int, year: Optional[int]= None) -> List[E
     :param month: month in Hijri date system
     :param year: year in Hijri date system
     """
-    month_events = cast(Dict[str, List[EventType]], HIJRI_EVENTS.get(str(month), {}))
+    month_events = HIJRI_EVENTS.get(str(month), {})
     return month_events.get(str(day), [])
 
 
@@ -276,7 +276,7 @@ def is_holiday(
         year=year,
         input_date_system=input_date_system,
         event_date_system=event_date_system)
-    return cast(bool, events["is_holiday"])
+    return events["is_holiday"] is True
 
 
 def is_today_holiday(event_date_system: Optional[DateSystem] = None) -> bool:
@@ -286,4 +286,4 @@ def is_today_holiday(event_date_system: Optional[DateSystem] = None) -> bool:
     :param event_date_system: event date system
     """
     events = get_today_events(event_date_system=event_date_system)
-    return cast(bool, events["is_holiday"])
+    return events["is_holiday"] is True
