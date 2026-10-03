@@ -1,19 +1,18 @@
 # -*- coding: utf-8 -*-
 """Functions for the rokh package."""
-from typing import List, Dict, Tuple, Union, Optional, Any
+from typing import List, Dict, Union, Optional, Any
 from .events.jalali import EVENTS as JALALI_EVENTS
 from .events.gregorian import EVENTS as GREGORIAN_EVENTS
 from .events.hijri import EVENTS as HIJRI_EVENTS
 from .errors import RokhValidationError
-from .params import DateSystem
+from .params import DateSystem, EventType, DateTupleType
 from .params import YEAR_VALUE_ERROR, MONTH_VALUE_ERROR, DAY_VALUE_ERROR, INVALID_DATE_ERROR
 from .params import INPUT_DATE_SYSTEM_TYPE_ERROR, EVENT_DATE_SYSTEM_TYPE_ERROR
 import datetime
 import jdatetime
 import hijridate
 
-
-def _convert_to_gregorian(input_date_system: DateSystem, day: int, month: int, year: int) -> Tuple[int, int, int]:
+def _convert_to_gregorian(input_date_system: DateSystem, day: int, month: int, year: int) -> DateTupleType:  # type: ignore[return]
     """
     Convert from input date system to Gregorian.
 
@@ -32,7 +31,7 @@ def _convert_to_gregorian(input_date_system: DateSystem, day: int, month: int, y
         return (g.day, g.month, g.year)
 
 
-def _convert_from_gregorian(target_date_system: DateSystem, day: int, month: int, year: int) -> Tuple[int, int, int]:
+def _convert_from_gregorian(target_date_system: DateSystem, day: int, month: int, year: int) -> DateTupleType:  # type: ignore[return]
     """
     Convert from Gregorian to target date system.
 
@@ -66,7 +65,7 @@ def _get_current_year(date_system: DateSystem) -> int:
     return today_converted[2]
 
 
-def _get_jalali_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, Union[str, bool]]]:
+def _get_jalali_events(day: int, month: int, year: Optional[int]= None) -> List[EventType]:
     """
     Retrieve Jalali events for a specific date.
 
@@ -74,10 +73,11 @@ def _get_jalali_events(day: int, month: int, year: Optional[int]= None) -> List[
     :param month: month in Jalali date system
     :param year: year in Jalali date system
     """
-    return JALALI_EVENTS.get(str(month), {}).get(str(day), [])
+    month_events = JALALI_EVENTS.get(str(month), {})
+    return month_events.get(str(day), [])
 
 
-def _get_gregorian_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, Union[str, bool]]]:
+def _get_gregorian_events(day: int, month: int, year: Optional[int]= None) -> List[EventType]:
     """
     Retrieve Gregorian events for a specific date.
 
@@ -85,10 +85,11 @@ def _get_gregorian_events(day: int, month: int, year: Optional[int]= None) -> Li
     :param month: month in Gregorian date system
     :param year: year in Gregorian date system
     """
-    return GREGORIAN_EVENTS.get(str(month), {}).get(str(day), [])
+    month_events = GREGORIAN_EVENTS.get(str(month), {})
+    return month_events.get(str(day), [])
 
 
-def _get_hijri_events(day: int, month: int, year: Optional[int]= None) -> List[Dict[str, Union[str, bool]]]:
+def _get_hijri_events(day: int, month: int, year: Optional[int]= None) -> List[EventType]:
     """
     Retrieve Hijri events for a specific date.
 
@@ -96,10 +97,11 @@ def _get_hijri_events(day: int, month: int, year: Optional[int]= None) -> List[D
     :param month: month in Hijri date system
     :param year: year in Hijri date system
     """
-    return HIJRI_EVENTS.get(str(month), {}).get(str(day), [])
+    month_events = HIJRI_EVENTS.get(str(month), {})
+    return month_events.get(str(day), [])
 
 
-def _has_holiday(events: Dict[str, List[Dict[str, Union[str, bool]]]]) -> bool:
+def _has_holiday(events: Dict[str, List[EventType]]) -> bool:
     """
     Determine if any event is a holiday.
 
@@ -128,7 +130,7 @@ def _validate_date(
     try:
         if year is None:
             year = _get_current_year(date_system=input_date_system)
-        result = {DateSystem.GREGORIAN: [], DateSystem.JALALI: [], DateSystem.HIJRI: []}
+        result: Dict[DateSystem, DateTupleType] = {}
         result[DateSystem.GREGORIAN] = _convert_to_gregorian(input_date_system=input_date_system, day=day, month=month, year=year)
         result[DateSystem.JALALI] = _convert_from_gregorian(DateSystem.JALALI, *result[DateSystem.GREGORIAN])
         result[DateSystem.HIJRI] = _convert_from_gregorian(DateSystem.HIJRI, *result[DateSystem.GREGORIAN])
@@ -211,14 +213,15 @@ def get_events(
     gregorian_date = _convert_to_gregorian(input_date_system, day, month, year)
     jalali_date = _convert_from_gregorian(DateSystem.JALALI, *gregorian_date)
     hijri_date = _convert_from_gregorian(DateSystem.HIJRI, *gregorian_date)
-    result = {"events": dict(),
-              "is_holiday": False,
-              "input_date_system": input_date_system.value,
-              "event_date_system": "all",
-              "gregorian_date": dict(zip(["day", "month", "year"], gregorian_date)),
-              "jalali_date": dict(zip(["day", "month", "year"], jalali_date)),
-              "hijri_date": dict(zip(["day", "month", "year"], hijri_date)),
-              }
+    result: Dict[str, Any] = {
+        "events": dict(),
+        "is_holiday": False,
+        "input_date_system": input_date_system.value,
+        "event_date_system": "all",
+        "gregorian_date": dict(zip(["day", "month", "year"], gregorian_date)),
+        "jalali_date": dict(zip(["day", "month", "year"], jalali_date)),
+        "hijri_date": dict(zip(["day", "month", "year"], hijri_date)),
+    }
 
     if event_date_system is None:
         result["events"]["jalali"] = _get_jalali_events(*jalali_date)
@@ -273,7 +276,7 @@ def is_holiday(
         year=year,
         input_date_system=input_date_system,
         event_date_system=event_date_system)
-    return events["is_holiday"]
+    return events["is_holiday"] is True
 
 
 def is_today_holiday(event_date_system: Optional[DateSystem] = None) -> bool:
@@ -283,4 +286,4 @@ def is_today_holiday(event_date_system: Optional[DateSystem] = None) -> bool:
     :param event_date_system: event date system
     """
     events = get_today_events(event_date_system=event_date_system)
-    return events["is_holiday"]
+    return events["is_holiday"] is True
