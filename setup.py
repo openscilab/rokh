@@ -43,7 +43,6 @@ setup(
         'Development Status :: 3 - Alpha',
         'Natural Language :: English',
         'Natural Language :: Persian',
-        'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
